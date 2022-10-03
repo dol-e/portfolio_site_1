@@ -26,7 +26,7 @@ var swiper2 = new Swiper(".swiper2", {
       slidesPerView: 3
     },
 
-    1500: { //1500보다 커졌을 때
+    1660: { //1660보다 커졌을 때
       slidesPerView: 4
     },
   },
@@ -76,16 +76,12 @@ var swiper3 = new Swiper(".swiper3", {
   breakpoints: {
 
     900: { //900보다 커졌을 때
-      slidesPerView: 1
-    },
-
-    1200: { //1200보다 커졌을 때
       slidesPerView: 2
     },
 
-    1500: { //1500보다 커졌을 때
+    1200: { //1200보다 커졌을 때
       slidesPerView: 3
-    },
+    }
   },
   navigation: {
     nextEl: ".swiper-button-next",

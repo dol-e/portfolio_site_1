@@ -107,6 +107,9 @@
         .slide14 a:hover {background-image: url(../img/main/pro_14_on.png);}
         .slide15 a:hover {background-image: url(../img/main/pro_15_on.png);}
         .slide16 a:hover {background-image: url(../img/main/pro_16_on.png);}
+
+        .swiper-button-next {top: 40%; right: -30px;}
+        .swiper-button-prev {top: 40%; left: -30px}
         
       }
 
@@ -117,7 +120,6 @@
         }
         .tab_cont {display: block;}
       }
-
 
       
     }
@@ -146,45 +148,67 @@
   background: #ffdcd1;
   
   .row {
-    width: 1400px;
+    position: relative;
+    width: 1300px;
     padding: 130px 0;
     text-align: center;
     margin: 0 auto;
-    border: 1px solid red;
   }
 
   h2 {@include sec_tit();
     &:after {@include sec_tit_line();}
   }
+  .swiper {
+    margin-top: 50px;
+  }
   .swiper-slide {
+    padding-bottom: 40px;
     >a {
-      display: block; width: 397px; margin: 0 auto;
+      position: relative; display: block; width: 400px; margin: 0 auto;
       img {
         display: block; width: 100%; transition: .35s;
+        transform: scale(0.85);
+      }
+      figcaption {
+        position: absolute; left: 0; bottom: -100px;
+        width: 100%; background: #3c2121; padding: 20px 20px 60px;
+        transform: scale(1.1);
+        opacity: 0; transition: .35s; 
+        p {
+          font: 400 18px/1.4 "S-CoreDream"; color: #fff; text-align: left; word-break: keep-all;
+          &::after {
+            content: ''; 
+            position: absolute; left: 20px; bottom: -20px;
+            width: 30px; height: 14px; background: url(../img/main/arrow_cont.png) no-repeat;
+            transition: .35s .25s; 
+          }
+        }
+
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+        figcaption {
+          bottom: -30px; opacity: 1;
+          p {
+            &::after {
+              bottom: 25px;
+            }
+          }
+        }
       }
     }
   }
+
+  .swiper-button-next {top: 55%; right: -40px;}
+  .swiper-button-prev {top: 55%; left: -40px}
 
 }
 
 
 /* 미디어쿼리 */
-@media screen and (max-width: 1600px) {
-
-  #event {
-    .row {
-      width: 1000px;
-    }
-    .swiper-slide {
-      >a {
-        width: 284px;
-      }
-    }
-  }
-
-}
-
-@media screen and (max-width: 1499px) {
+@media screen and (max-width: 1659px) {
 
   #product {
     .row {
@@ -194,11 +218,36 @@
 
 }
 
+@media screen and (max-width: 1499px) {
+
+  
+
+  #event {
+    .row {
+      width: 1000px;
+    }
+    .swiper-slide {
+      >a {
+        width: 300px;
+      }
+    }
+  }
+
+  
+
+}
+
 @media screen and (max-width: 1199px) {
 
   #product {
     .row {
       width: 800px;
+    }
+  }
+
+  #event {
+    .row {
+      width: 650px;
     }
   }
 
@@ -212,4 +261,34 @@
     }
   }
 
+  #event {
+    .row {
+      width: 100%; max-width: 500px;
+    }
+    .swiper-slide {
+      >a {
+        width: 400px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  #product .tab_pro > li .tab_cont .swiper-slide a {
+    width: 300px;
+  }
+
+  #event {
+    .row {
+      width: 100%; max-width: 500px;
+    }
+    .swiper-slide {
+      >a {
+        width: 300px;
+      }
+    }
+  }
+  
 }

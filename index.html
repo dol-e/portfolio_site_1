@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홍루이젠 메인</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="js/header.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <!-- 스킵 내비게이션 -->
+  <ul id="skip">
+    <li><a href="#visual">본문으로 바로가기</a></li>
+    <li><a href="#gnb">주메뉴 바로가기</a></li>
+    <li><a href="#footer">푸터 바로가기</a></li>
+  </ul>
+  
+  <!-- wrap -->
+  <div id="wrap">
+    <!-- header -->
+    <header id="header">
+      <div class="inner">
+        <!-- 로고 -->
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="img/layout/logo.png" alt="홍루이젠">
+          </a>
+        </h1>
+
+        <!-- 웹 메뉴 영역 -->
+        <nav class="menu_web">
+          <!-- 주메뉴 -->
+          <h2 class="hidden">주메뉴</h2>
+          <ul id="gnb">
+            <li>
+              <a href="#">브랜드소개</a>
+              <div class="sub_menu">
+                <h3>브랜드소개</h3>
+                <ul>
+                  <li>
+                    <a href="#">홍루이젠 소개</a>
+                  </li>
+                  <li>
+                    <a href="#">브랜드 철학</a>
+                  </li>
+                  <li>
+                    <a href="#">히스토리</a>
+                  </li>
+                </ul>
+                <img src="img/layout/subimg_1.jpg" alt="">
+              </div>
+            </li>
+            <li>
+              <a href="#">브랜드관</a>
+              <div class="sub_menu">
+                <h3>브랜드관</h3>
+                <ul>
+                  <li>
+                    <a href="#">브랜드관</a>
+                  </li>
+                </ul>
+                <img src="img/layout/subimg_2.jpg" alt="">
+              </div>
+            </li>
+            <li>
+              <a href="#">메뉴</a>
+              <div class="sub_menu">
+                <h3>메뉴</h3>
+                <ul>
+                  <li>
+                    <a href="#">전체</a>
+                  </li>
+                  <li>
+                    <a href="#">신제품</a>
+                  </li>
+                  <li>
+                    <a href="#">소프트 샌드위치</a>
+                  </li>
+                  <li>
+                    <a href="#">갓군샌</a>
+                  </li>
+                  <li>
+                    <a href="#">프레쉬 샌드위치</a>
+                  </li>
+                  <li>
+                    <a href="#">디저트</a>
+                  </li>
+                  <li>
+                    <a href="#">음료</a>
+                  </li>
+                </ul>
+                <img src="img/layout/subimg_2.jpg" alt="">
+              </div>
+            </li>
+            <li>
+              <a href="#">매장안내</a>
+              <div class="sub_menu">
+                <h3>매장안내</h3>
+                <ul>
+                  <li>
+                    <a href="#">매장 찾기</a>
+                  </li>
+                  <li>
+                    <a href="#">단체주문</a>
+                  </li>
+                </ul>
+                <img src="img/layout/subimg_3.jpg" alt="">
+              </div>
+            </li>
+            <li>
+              <a href="#">커뮤니티</a>
+              <div class="sub_menu">
+                <h3>커뮤니티</h3>
+                <ul>
+                  <li>
+                    <a href="#">홍루이젠 소식</a>
+                  </li>
+                  <li>
+                    <a href="#">프레스센터</a>
+                  </li>
+                  <li>
+                    <a href="#">이벤트</a>
+                  </li>
+                  <li>
+                    <a href="#">고객의 소리</a>
+                  </li>
+                </ul>
+                <img src="img/layout/subimg_4.jpg" alt="">
+              </div>
+            </li>
+            <li>
+              <a href="#">쇼핑하기</a>
+              <div class="sub_menu">
+                <h3>쇼핑하기</h3>
+                <ul>
+                  <li>
+                    <a href="#">쇼핑하기</a>
+                  </li>
+                </ul>
+                <img src="img/layout/subimg_4.jpg" alt="">
+              </div>
+            </li>
+          </ul>      
+        </nav>
+
+        <!-- 유틸리티 메뉴 -->
+        <ul class="util">
+          <li>
+            <a href="#" title="로그인">LOGIN</a>
+          </li>
+          <li>
+            <a href="#" title="회원가입">JOIN</a>
+          </li>
+        </ul>
+
+        <!-- 메뉴 열기 -->
+        <a href="#" class="btn_call" title="메뉴 열기">
+          <span class="hidden">메뉴 열기</span>
+        </a>
+
+        <!-- 모바일 메뉴 영역 -->
+        <nav class="menu_mo">
+          <h2>
+            <a href="index.html">
+              <img src="img/layout/logo.png" alt="홍루이젠">
+            </a>
+          </h2>
+
+          <!-- 모바일 유틸리티 메뉴 -->
+          <ul class="util_mo">
+            <li>
+              <a href="#" title="로그인">LOGIN</a>
+            </li>
+            <li>
+              <a href="#" title="회원가입">JOIN</a>
+            </li>
+          </ul>
+
+          <!-- 모바일 주메뉴 -->
+          <ul id="gnb_mo">
+            <li>
+              <a href="#">브랜드소개</a>
+              <div class="sub_menu">
+                <ul>
+                  <li>
+                    <a href="#">홍루이젠 소개</a>
+                  </li>
+                  <li>
+                    <a href="#">브랜드 철학</a>
+                  </li>
+                  <li>
+                    <a href="#">히스토리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">브랜드관</a>
+            </li>
+            <li>
+              <a href="#">메뉴</a>
+              <div class="sub_menu">
+                <ul>
+                  <li>
+                    <a href="#">전체</a>
+                  </li>
+                  <li>
+                    <a href="#">신제품</a>
+                  </li>
+                  <li>
+                    <a href="#">소프트 샌드위치</a>
+                  </li>
+                  <li>
+                    <a href="#">갓군샌</a>
+                  </li>
+                  <li>
+                    <a href="#">프레쉬 샌드위치</a>
+                  </li>
+                  <li>
+                    <a href="#">디저트</a>
+                  </li>
+                  <li>
+                    <a href="#">음료</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">매장안내</a>
+              <div class="sub_menu">
+                <ul>
+                  <li>
+                    <a href="#">매장 찾기</a>
+                  </li>
+                  <li>
+                    <a href="#">단체주문</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">커뮤니티</a>
+              <div class="sub_menu">
+                <ul>
+                  <li>
+                    <a href="#">홍루이젠 소식</a>
+                  </li>
+                  <li>
+                    <a href="#">프레스센터</a>
+                  </li>
+                  <li>
+                    <a href="#">이벤트</a>
+                  </li>
+                  <li>
+                    <a href="#">고객의 소리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">쇼핑하기</a>
+            </li>
+          </ul>
+
+        </nav>
+
+      </div>
+    </header>
+
+    <!-- visual -->
+    <figure id="visual">
+      <h2 class="hidden">메인 비주얼 영역</h2>
+        <div class="swiper swiper1">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <img src="img/main/visual_1.png" alt="">
+            </li>
+            <li class="swiper-slide">
+              <img src="img/main/visual_2.png" alt="">
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
+    </figure>
+
+
+    <!-- procuct -->
+    <section id="product">
+      <div class="inner">
+        <div class="row">
+          <h2>PRODUCT</h2>
+
+          <!-- procuct 탭메뉴 -->
+          <ul class="tab_pro">
+            <!-- new -->
+            <li class="on">
+              <a href="#">NEW</a>
+              <div class="tab_cont">
+                <div class="swiper swiper2">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide slide1">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_1.png" alt="">
+                          <figcaption>
+                            <h3>홍루이젠 잠봉뵈르</h3>
+                            <p>풍미 가득 버터와 국내산 잠봉이 만나 부드러운 소프트 바게트 속으로</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide2">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_2.png" alt="">
+                          <figcaption>
+                            <h3>쿠키앤크림 샌드위치</h3>
+                            <p>부드러운 우유크림 사이에 달콤 바삭 쿠키가 듬뿍!</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide3">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_3.png" alt="">
+                          <figcaption>
+                            <h3>딸기퐁당 샌드위치</h3>
+                            <p>딸기 크림 속 동결건조 딸기가 퐁당~</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide4">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_4.png" alt="">
+                          <figcaption>
+                            <h3>인절미 라떼</h3>
+                            <p>고소한 인절미 콩가루 & 우유가 믹스되어 누구나 즐길 수 있는 밀크 음료</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </li>
+
+            <!-- sandwich -->
+            <li>
+              <a href="#">SANDWICH</a>
+              <div class="tab_cont">
+                <div class="swiper swiper2">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide slide5">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_5.png" alt="">
+                          <figcaption>
+                            <h3>홍루이젠 잠봉뵈르222</h3>
+                            <p>풍미 가득 버터와 국내산 잠봉이 만나 부드러운 소프트 바게트 속으로</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide6">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_6.png" alt="">
+                          <figcaption>
+                            <h3>쿠키앤크림 샌드위치</h3>
+                            <p>부드러운 우유크림 사이에 달콤 바삭 쿠키가 듬뿍!</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide7">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_7.png" alt="">
+                          <figcaption>
+                            <h3>딸기퐁당 샌드위치</h3>
+                            <p>딸기 크림 속 동결건조 딸기가 퐁당~</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide8">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_8.png" alt="">
+                          <figcaption>
+                            <h3>인절미 라떼</h3>
+                            <p>고소한 인절미 콩가루 & 우유가 믹스되어 누구나 즐길 수 있는 밀크 음료</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+
+                  </ul>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </li>
+
+            <!-- dessert -->
+            <li>
+              <a href="#">DESSERT</a>
+              <div class="tab_cont">
+                <div class="swiper swiper2">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide slide9">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_9.png" alt="">
+                          <figcaption>
+                            <h3>홍루이젠 잠봉뵈르333</h3>
+                            <p>풍미 가득 버터와 국내산 잠봉이 만나 부드러운 소프트 바게트 속으로</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide10">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_10.png" alt="">
+                          <figcaption>
+                            <h3>쿠키앤크림 샌드위치</h3>
+                            <p>부드러운 우유크림 사이에 달콤 바삭 쿠키가 듬뿍!</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide11">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_11.png" alt="">
+                          <figcaption>
+                            <h3>딸기퐁당 샌드위치</h3>
+                            <p>딸기 크림 속 동결건조 딸기가 퐁당~</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide12">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_12.png" alt="">
+                          <figcaption>
+                            <h3>인절미 라떼</h3>
+                            <p>고소한 인절미 콩가루 & 우유가 믹스되어 누구나 즐길 수 있는 밀크 음료</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+
+                  </ul>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </li>
+
+            <!-- drink -->
+            <li>
+              <a href="#">DRINK</a>
+              <div class="tab_cont">
+                <div class="swiper swiper2">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide slide13">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_13.png" alt="">
+                          <figcaption>
+                            <h3>홍루이젠 잠봉뵈르444</h3>
+                            <p>풍미 가득 버터와 국내산 잠봉이 만나 부드러운 소프트 바게트 속으로</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide14">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_14.png" alt="">
+                          <figcaption>
+                            <h3>쿠키앤크림 샌드위치</h3>
+                            <p>부드러운 우유크림 사이에 달콤 바삭 쿠키가 듬뿍!</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide15">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_15.png" alt="">
+                          <figcaption>
+                            <h3>딸기퐁당 샌드위치</h3>
+                            <p>딸기 크림 속 동결건조 딸기가 퐁당~</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li class="swiper-slide slide16">
+                      <a href="#">
+                        <figure>
+                          <img src="img/main/pro_16.png" alt="">
+                          <figcaption>
+                            <h3>인절미 라떼</h3>
+                            <p>고소한 인절미 콩가루 & 우유가 믹스되어 누구나 즐길 수 있는 밀크 음료</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </li>
+
+                  </ul>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+          <!-- procuct 하단버튼 -->
+          <div class="btn_pro">
+            <ul>
+              <li>
+                <a href="#">What's New?</a>
+              </li>
+              <li>
+                <a href="#">All Product</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- event -->
+    <section id="event">
+      <div class="inner">
+        <div class="row">
+          <h2>EVENT</h2>
+          <div class="swiper swiper3">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/main/event_1.png" alt="">
+                    <figcaption>
+                      <p>메이플 월넛 출시 프로모션</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/main/event_2.jpg" alt="">
+                    <figcaption>
+                      <p>메이플 월넛 샌드위치 인증샷 이벤트</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/main/event_3.jpg" alt="">
+                    <figcaption>
+                      <p>네이버페이로 1만원 이상 결제 시 2천원 바로 적립!</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/main/event_4.jpg" alt="">
+                    <figcaption>
+                      <p>13,000원 이상 구매 시 음료 무료 증정&amp;즉시 할인</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/main/event_5.jpg" alt="">
+                    <figcaption>
+                      <p>제주 트래블세트 경품 이벤트</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/main/event_6.jpg" alt="">
+                    <figcaption>
+                      <p>단체주문 이벤트</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+            
+          </div>
+          <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- news -->
+    <section id="news">
+      <div class="inner">
+        <h2>NEWS</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="img/main/noimg.png" alt="">
+            </a>
+            <div class="news_cont">
+              <span>NEWS</span>
+              <h3>홍루이젠, 정통 아메리칸 샌드위치 '바베큐 풀드포크' 출시</h3>
+              <p>&nbsp;샌드위치 전문 브랜드 홍루이젠이 프리미엄 샌드위치 라인인 ‘고메 샌드위치’ 카테고리를 런칭하고, ‘바베큐 풀드포크’ 샌드위치를 출시했다고 27일 밝혔다.홍루이젠 관계자는
+                “기존 홍루이젠 잠봉뵈르를 포함한 프리미엄 샌드위치 라인인 고메 샌드위치 카테고리를 런칭했다.”며 “프랑스의 잠봉뵈르에 이어 미국의 풀드포크를 컨셉으로 한 샌드위치를 출시했다.</p>
+            </div>
+            <a href="#">READ MORE</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/main/noimg.png" alt="">
+            </a>
+            <div class="news_cont">
+              <span>NEWS</span>
+              <h3>홍루이젠, 여름 신메뉴 '아이스티'3종 출시</h3>
+              <p>샌드위치 전문 브랜드 홍루이젠이 청량함을 담은 아이스티 3종을 19일 출시했다고 밝혔다. 이번에 선보인 아이스티는 ‘리프레싱 타임’이라는 컨셉으로 무더운 올여름 더위에 지친 고객들을
+                겨냥한 청량함 가득한 음료이다. 신메뉴는 ‘딸기 아이스티’와 ‘청포도 아이스티’, ‘복숭아 아이스티’ 3종이다. 과일의 맛을 담은 청량하고 상큼, 달콤한 맛이 특징이며 누구나 부담 없이
+                즐길 수 있다.</p>
+            </div>
+            <a href="#">READ MORE</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- video -->
+    <section id="video">
+      <div class="inner">
+        <h2>HONGRUIZHEN VIDEO</h2>
+        <div class="tit_video">
+          <span class="txt">홍루이젠 TV</span>
+          <h3>오늘의 샌드위치 베이커리 홍루이젠</h3>
+          <p>홍루이젠의 새로운 소식을 영상으로 만나보세요!</p>
+          <span class="moving_arrow"></span>
+        </div>
+        <div class="tab_video">
+          <ul>
+            <li>
+              <a href="#" title="홍루이젠 cf 영상">
+                <span>홍루이젠 cf 영상</span>
+              </a>
+              <div class="video_cont">
+                <a href="#">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/QyQEY9zDQbI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                  <button type="button">
+                    <span class="hidden">재생</span>
+                  </button>
+                </a>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="홍루이젠 CM송 영상">
+                <span>홍루이젠 CM송 영상</span>
+                <div class="video_cont">
+                  <a href="#">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VTTkU4SReM8"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                    <button type="button">
+                      <span class="hidden">재생</span>
+                    </button>
+                  </a>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- follow -->
+    <section id="follow">
+      <div class="inner">
+        <h2>FOLLOW US</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="img/main/insta_1.jpg" alt="">
+              <div><span>@hungruichenkorea</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/main/insta_2.jpg" alt="">
+              <div><span>@hungruichenkorea</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/main/insta_3.jpg" alt="">
+              <div><span>@hungruichenkorea</span></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- moving_text -->
+    <section id="moving_text">
+      <div>
+        <p>SIMPLE·SWEET·SOFT SANDWICH HUNG RUI CHEN SINCE 1947</p>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="inner">
+        <ul class="foot_wrap">
+          <li class="foot_box foot_left">
+            <ul class="foot_menu">
+              <li>
+                <a href="#">브랜드 소개</a>
+              </li>
+              <li>
+                <a href="#">브랜드관</a>
+              </li>
+              <li>
+                <a href="#">매장안내</a>
+              </li>
+            </ul>
+            <div class="foot_txt">
+              <p>(주)타이웨이 대표이사 : 송원섭</p>
+              <address>주소 : 경기도 고양시 덕양구 삼송로 12 반도유스퀘어 701,702호</address>
+              <p>사업자등록번호 : 730-86-00779 가맹문의 대표번호 : 1566-8025</p>
+            </div>
+          </li>
+          <li class="foot_box foot_center">
+            <h2 class="foot_logo">
+              <a href="index.html">
+                <img src="img/layout/logo_foot.png" alt="홍루이젠">
+              </a>
+            </h2>
+          </li>
+          <li class="foot_box foot_right">
+            <ul class="foot_menu">
+              <li>
+                <a href="#">브랜드 소개</a>
+              </li>
+              <li>
+                <a href="#">브랜드관</a>
+              </li>
+              <li>
+                <a href="#">매장안내</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="#" title="인스타그램으로 바로가기">
+                  <img src="img/layout/insta.png" alt="인스타그램으로 바로가기">
+                </a>
+              </li>
+              <li>
+                <a href="#" title="페이스북으로 바로가기">
+                  <img src="img/layout/facebook.png" alt="페이스북으로 바로가기">
+                </a>
+              </li>
+              <li>
+                <a href="#" title="유튜브로 바로가기">
+                  <img src="img/layout/youtube.png" alt="유튜브로 바로가기">
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="foot_copy">
+          <p>Copyright (c) HONG RUI CHEN CORP All right reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- // wrap -->
+
+  <!-- 퀵 메뉴 -->
+  <ul id="quick">
+    <li>
+      <a href="#">
+        <img src="img/layout/quick_icon01.png" alt="위치 이미지">
+        <span>
+          FIND<br>US
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="img/layout/quick_icon02.png" alt="쇼핑백 이미지">
+        <span>
+          SHOP<br>NOW
+        </span>
+      </a>
+    </li>
+  </ul>
+
+</body>
+
+</html>

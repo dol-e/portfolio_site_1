@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+/* 폰트 파일 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap');
+@import 'font.scss';
+
+/* css 파일 */
+@import 'reset.scss';
+@import 'mixin.scss';
+@import 'layout.scss';
+@import 'main.scss';
+@import 'sub.scss';
+@import 'department.scss';
+@import 'community.scss';
+
+

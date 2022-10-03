@@ -1,0 +1,645 @@
+@charset "UTF-8";
+/* 폰트 파일 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap");
+/* 에스코어드림 라이트 */
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 300;
+  src: url("../font/SCDream3.eot");
+  src: url("../font/SCDream3.eot?#iefix") format("embedded-opentype"), url("../font/SCDream3.woff") format("woff"), url("../font/SCDream3.otf") format("opentype");
+}
+/* 에스코어드림 레귤러 */
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 400;
+  src: url("../font/SCDream4.eot");
+  src: url("../font/SCDream4.eot?#iefix") format("embedded-opentype"), url("../font/SCDream4.woff") format("woff"), url("../font/SCDream4.otf") format("opentype");
+}
+/* 에스코어드림 미디엄 */
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 500;
+  src: url("../font/SCDream5.eot");
+  src: url("../font/SCDream5.eot?#iefix") format("embedded-opentype"), url("../font/SCDream5.woff") format("woff"), url("../font/SCDream5.otf") format("opentype");
+}
+/* 에스코어드림 볼드 */
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 600;
+  src: url("../font/SCDream6.eot");
+  src: url("../font/SCDream6.eot?#iefix") format("embedded-opentype"), url("../font/SCDream6.woff") format("woff"), url("../font/SCDream6.otf") format("opentype");
+}
+/* 노토산스 KR - Light */
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  src: url("../font/NotoSansKR-Light.eot");
+  src: url("../font/NotoSansKR-Light.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Light.woff") format("woff"), url("../font/NotoSansKR-Light.woff2") format("woff2");
+}
+/* css 파일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 대체 텍스트 */
+.hidden {
+  position: absolute;
+  top: -99999999px;
+  opacity: 0;
+}
+
+/* clearfix */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* 스킵 내비게이션 */
+#skip li {
+  float: left;
+  position: absolute;
+  display: block;
+  width: 200px;
+  top: -30px;
+}
+#skip li a {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  padding-top: 5px;
+  z-index: -999;
+}
+#skip li a:focus, #skip li a:active {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  left: 2px;
+  top: 32px;
+  background: #CE403D;
+  z-index: 999;
+}
+
+/* 전체 레이아웃 */
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: 1660px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.sub_bg {
+  position: fixed;
+  left: 0;
+  top: 79px;
+  width: 100%;
+  height: 0;
+  background: #fff5d9;
+  border-top: 1px solid #eee;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+  z-index: 99;
+  transition: 0.25s;
+}
+.sub_bg.on {
+  top: 80px;
+  height: 300px;
+}
+
+/* 키프레임 애니메이션 */
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* 헤더 */
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  z-index: 100;
+}
+#header h1.logo {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#header h1.logo img {
+  display: block;
+  width: 180px;
+}
+#header .menu_web {
+  height: inherit;
+}
+#header .menu_web #gnb {
+  height: inherit;
+  display: inline-flex;
+  margin-left: 250px;
+}
+#header .menu_web #gnb > li {
+  padding: 30px 10px 0;
+}
+#header .menu_web #gnb > li > a {
+  font: 500 17px/1 "S-CoreDream";
+  letter-spacing: -0.5px;
+  color: #401e20;
+}
+#header .menu_web #gnb > li .sub_menu {
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: calc(100% - 180px);
+  height: 300px;
+  transition: 0.35s;
+}
+#header .menu_web #gnb > li .sub_menu h3 {
+  font: 500 25px/1 "S-CoreDream";
+  letter-spacing: -0.5px;
+  color: #000;
+  padding: 30px 0;
+  flex: 1;
+}
+#header .menu_web #gnb > li .sub_menu h3::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background: #999;
+  vertical-align: middle;
+  margin: 0 0 5px 20px;
+}
+#header .menu_web #gnb > li .sub_menu ul {
+  padding: 30px 0;
+  flex: 1;
+}
+#header .menu_web #gnb > li .sub_menu ul li {
+  margin-bottom: 15px;
+}
+#header .menu_web #gnb > li .sub_menu ul li a {
+  display: block;
+  font: 300 20px/1 "S-CoreDream";
+  letter-spacing: -0.5px;
+  color: #333;
+  cursor: pointer;
+  transition: 0.25s;
+}
+#header .menu_web #gnb > li .sub_menu ul li a:hover {
+  font: 500 20px/1 "S-CoreDream";
+  color: #f52334;
+}
+#header .menu_web #gnb > li .sub_menu img {
+  width: 100%;
+  max-width: 990px;
+  height: 100%;
+  object-fit: contain;
+  flex: 1;
+}
+#header .menu_web #gnb > li.on .sub_menu {
+  display: flex;
+  animation: opacity 1s;
+}
+#header .util {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+}
+#header .util li {
+  position: relative;
+  margin-right: 20px;
+}
+#header .util li::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 2px;
+  height: 14px;
+  background: #401e1e;
+}
+#header .util li:last-child {
+  margin-right: 0;
+}
+#header .util li:last-child::after {
+  display: none;
+}
+#header .util li a {
+  font: 700 15px/1 "Montserrat";
+  color: #401e1e;
+}
+#header .btn_call {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 40px;
+  height: 24px;
+  background: url(../img/layout/icon_ham.png);
+}
+#header .menu_mo {
+  display: none;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1600px) {
+  /* 전체 레이아웃 */
+  .sub_bg.on {
+    height: 242px;
+  }
+  /* 헤더 */
+  #header h1.logo img {
+    width: 130px;
+  }
+  #header .menu_web #gnb {
+    margin-left: 220px;
+  }
+  #header .menu_web #gnb > li .sub_menu {
+    width: calc(100% - 140px);
+    height: 200px;
+  }
+  #header .menu_web #gnb > li .sub_menu h3 {
+    padding: 20px 0;
+    font: 500 22px/1 "S-CoreDream";
+  }
+  #header .menu_web #gnb > li .sub_menu h3::after {
+    display: none;
+  }
+  #header .menu_web #gnb > li .sub_menu ul {
+    padding: 22px 0;
+  }
+  #header .menu_web #gnb > li .sub_menu ul li {
+    margin-bottom: 12px;
+  }
+  #header .menu_web #gnb > li .sub_menu ul li a {
+    font: 300 18px/1 "S-CoreDream";
+  }
+  #header .menu_web #gnb > li .sub_menu ul li a:hover {
+    font: 500 18px/1 "S-CoreDream";
+  }
+  #header .menu_web #gnb > li .sub_menu img {
+    max-width: 700px;
+    height: auto;
+    align-self: flex-start;
+  }
+}
+@media screen and (max-width: 1200px) {
+  /* 헤더 */
+  #header .menu_web {
+    display: none;
+  }
+}
+/* 비주얼 */
+#visual {
+  margin-top: 80px;
+}
+#visual .swiper1 {
+  width: 100%;
+  height: 100%;
+}
+#visual .swiper1 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#product {
+  background: #fff5d9;
+}
+#product .row {
+  width: 1420px;
+  padding: 130px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+#product h2 {
+  position: relative;
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 50px;
+  color: #f52334;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+}
+#product h2:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #f52334;
+  bottom: -5px;
+  left: 0;
+  transition: 0.5s;
+}
+#product .tab_pro {
+  position: relative;
+}
+#product .tab_pro > li > a {
+  display: block;
+  position: absolute;
+  top: -60px;
+  font: 400 16px/1 "Nunito Sans";
+  color: #401e20;
+  z-index: 1;
+}
+#product .tab_pro > li > a::after {
+  content: "";
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  background: #ffe001;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  z-index: -1;
+  opacity: 0;
+}
+#product .tab_pro > li > a:hover {
+  font: 700 16px/1 "Nunito Sans";
+}
+#product .tab_pro > li > a:hover::after {
+  opacity: 1;
+}
+#product .tab_pro > li:nth-child(1) > a {
+  width: 80px;
+  left: calc(50% - 200px);
+}
+#product .tab_pro > li:nth-child(2) > a {
+  width: 120px;
+  left: calc(50% - 120px);
+}
+#product .tab_pro > li:nth-child(3) > a {
+  width: 100px;
+  left: 50%;
+}
+#product .tab_pro > li:nth-child(4) > a {
+  width: 100px;
+  left: calc(50% + 100px);
+}
+#product .tab_pro > li .tab_cont {
+  display: none;
+  margin-top: 60px;
+  overflow: hidden;
+}
+#product .tab_pro > li .tab_cont .swiper-slide a {
+  display: block;
+  width: 330px;
+  margin: 0 auto;
+}
+#product .tab_pro > li .tab_cont .swiper-slide a img {
+  display: block;
+  width: 100%;
+  transition: 0.35s;
+}
+#product .tab_pro > li .tab_cont .swiper-slide a h3 {
+  position: relative;
+  display: inline-block;
+  font: 600 22px/1 "S-CoreDream";
+  color: #3c2121;
+  letter-spacing: -1.5px;
+  background: #ee7868;
+  border: 2px solid #3c2121;
+  padding: 10px 27px 15px 20px;
+  margin-top: 20px;
+  z-index: 1;
+}
+#product .tab_pro > li .tab_cont .swiper-slide a h3::after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  width: 100%;
+  height: 100%;
+  background: #fff5d9;
+  border: 2px solid #3c2121;
+  z-index: -1;
+}
+#product .tab_pro > li .tab_cont .swiper-slide a p {
+  font: 300 16px/1.3 "Noto Sans KR";
+  color: #666;
+  letter-spacing: -0.8px;
+  word-break: keep-all;
+  margin-top: 20px;
+}
+#product .tab_pro > li .tab_cont .swiper-slide a:hover {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+}
+#product .tab_pro > li .tab_cont .swiper-slide a:hover img {
+  opacity: 0;
+}
+#product .tab_pro > li .tab_cont .slide1 a:hover {
+  background-image: url(../img/main/pro_1_on.png);
+}
+#product .tab_pro > li .tab_cont .slide2 a:hover {
+  background-image: url(../img/main/pro_2_on.png);
+}
+#product .tab_pro > li .tab_cont .slide3 a:hover {
+  background-image: url(../img/main/pro_3_on.png);
+}
+#product .tab_pro > li .tab_cont .slide4 a:hover {
+  background-image: url(../img/main/pro_4_on.png);
+}
+#product .tab_pro > li .tab_cont .slide5 a:hover {
+  background-image: url(../img/main/pro_5_on.png);
+}
+#product .tab_pro > li .tab_cont .slide6 a:hover {
+  background-image: url(../img/main/pro_6_on.png);
+}
+#product .tab_pro > li .tab_cont .slide7 a:hover {
+  background-image: url(../img/main/pro_7_on.png);
+}
+#product .tab_pro > li .tab_cont .slide8 a:hover {
+  background-image: url(../img/main/pro_8_on.png);
+}
+#product .tab_pro > li .tab_cont .slide9 a:hover {
+  background-image: url(../img/main/pro_9_on.png);
+}
+#product .tab_pro > li .tab_cont .slide10 a:hover {
+  background-image: url(../img/main/pro_10_on.png);
+}
+#product .tab_pro > li .tab_cont .slide11 a:hover {
+  background-image: url(../img/main/pro_11_on.png);
+}
+#product .tab_pro > li .tab_cont .slide12 a:hover {
+  background-image: url(../img/main/pro_12_on.png);
+}
+#product .tab_pro > li .tab_cont .slide13 a:hover {
+  background-image: url(../img/main/pro_13_on.png);
+}
+#product .tab_pro > li .tab_cont .slide14 a:hover {
+  background-image: url(../img/main/pro_14_on.png);
+}
+#product .tab_pro > li .tab_cont .slide15 a:hover {
+  background-image: url(../img/main/pro_15_on.png);
+}
+#product .tab_pro > li .tab_cont .slide16 a:hover {
+  background-image: url(../img/main/pro_16_on.png);
+}
+#product .tab_pro > li.on > a {
+  font: 700 16px/1 "Nunito Sans";
+}
+#product .tab_pro > li.on > a::after {
+  opacity: 1;
+}
+#product .tab_pro > li.on .tab_cont {
+  display: block;
+}
+#product .btn_pro {
+  display: inline-block;
+  margin-top: 50px;
+}
+#product .btn_pro ul {
+  display: flex;
+}
+#product .btn_pro ul li:first-child {
+  margin-right: 30px;
+}
+#product .btn_pro ul li:first-child a {
+  position: relative;
+  display: inline-block;
+  width: 287px;
+  height: 60px;
+  max-width: 287px;
+  border-radius: 36px;
+  border: solid 3px #f52334;
+  font-family: "Nunito Sans";
+  color: #f52334;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 55px;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+#product .btn_pro ul li:last-child a {
+  position: relative;
+  display: inline-block;
+  width: 287px;
+  height: 60px;
+  max-width: 287px;
+  background: #f52334;
+  border-radius: 36px;
+  border: solid 3px #f52334;
+  font-family: "Nunito Sans";
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 55px;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#event {
+  background: #ffdcd1;
+}
+#event .row {
+  width: 1400px;
+  padding: 130px 0;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+#event h2 {
+  position: relative;
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 50px;
+  color: #f52334;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+}
+#event h2:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #f52334;
+  bottom: -5px;
+  left: 0;
+  transition: 0.5s;
+}
+#event .swiper-slide > a {
+  display: block;
+  width: 397px;
+  margin: 0 auto;
+}
+#event .swiper-slide > a img {
+  display: block;
+  width: 100%;
+  transition: 0.35s;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1600px) {
+  #event .row {
+    width: 1000px;
+  }
+  #event .swiper-slide > a {
+    width: 284px;
+  }
+}
+@media screen and (max-width: 1499px) {
+  #product .row {
+    width: 1100px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  #product .row {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 899px) {
+  #product .row {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

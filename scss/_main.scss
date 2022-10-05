@@ -32,7 +32,7 @@
     >li {
       >a {
         display: block; position: absolute; top: -60px;
-        font: 400 16px/1 "Nunito Sans"; color: #401e20;
+        font: 400 16px/1 'Nunito Sans'; color: #401e20;
         z-index: 1;
 
         &::after {
@@ -43,7 +43,7 @@
         }
 
         &:hover {
-          font: 700 16px/1 "Nunito Sans";
+          font: 700 16px/1 'Nunito Sans';
           &::after {opacity: 1;}
         }
       }
@@ -115,7 +115,7 @@
 
       &.on {
         >a {
-          font: 700 16px/1 "Nunito Sans";
+          font: 700 16px/1 'Nunito Sans';
           &::after {opacity: 1;}
         }
         .tab_cont {display: block;}
@@ -175,7 +175,7 @@
         transform: scale(1.1);
         opacity: 0; transition: .35s; 
         p {
-          font: 400 18px/1.4 "S-CoreDream"; color: #fff; text-align: left; word-break: keep-all;
+          font: 400 18px/1.4 'S-CoreDream'; color: #fff; text-align: left; word-break: keep-all;
           &::after {
             content: ''; 
             position: absolute; left: 20px; bottom: -20px;
@@ -205,6 +205,45 @@
   .swiper-button-prev {top: 55%; left: -40px}
 
 }
+
+
+
+
+#news {
+  background: #ffdcd1;
+  .inner {
+    padding: 130px 0; text-align: center;
+  }
+  h2 {
+    @include sec_tit();
+    &:after {@include sec_tit_line();}
+  }
+  ul {
+    width: 1000px; margin: 0 auto;
+    li {
+      display: flex;
+      border-top: 2px solid #000;
+      padding: 30px;
+
+      a {
+        display: block; width: 310px;
+        img {
+          //display: block; width: 100%; object-fit: cover;
+        }
+      }
+    }
+  }
+  
+}
+
+
+
+
+#video {
+  
+}
+
+
 
 
 /* 미디어쿼리 */

@@ -716,7 +716,41 @@ a {
 #news ul li a {
   display: block;
   width: 310px;
+  flex-shrink: 0;
 }
+#news ul li a img {
+  display: block;
+  width: 100%;
+}
+#news ul li .news_cont {
+  padding-left: 25px;
+  width: calc(100% - 310px);
+  text-align: left;
+}
+#news ul li .news_cont span {
+  display: inline-block;
+  background: #402021;
+  color: #fff;
+  font: 700 15px/1 "Nunito Sans";
+  padding: 8px 22px;
+  margin-bottom: 12px;
+}
+#news ul li .news_cont h3 {
+  font: 600 20px/1 "S-CoreDream";
+  color: #3c2121;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+#news ul li .news_cont p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  font: 300 17px/1.4 "Noto Sans KR";
+  color: #401e20;
+  letter-spacing: -0.5px;
+}
+
 /* 미디어쿼리 */
 @media screen and (max-width: 1659px) {
   #product .row {

@@ -1,16 +1,28 @@
 // swiper1 - 비주얼 영역
-var swiper1 = new Swiper(".swiper1", {
+const bullet = ['바베큐 풀드포크', '초코퐁당 샌드위치'];
+const swiper1 = new Swiper(".swiper1", {
   slidesPerView: 1,
   spaceBetween: 0,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    renderBullet: function (index, className) {
+      const slideIdx = String(index+1).padStart(2,"0");
+      const htmls = `
+      <div class="${className}">
+        <span>${slideIdx}</span>
+        <span class="icon"></span>
+        <span>${bullet[index]}</span>
+      </div>  
+      `;
+      return htmls;
+    }
   }
 });
 
 // swiper2 - PRODUCT 섹션
-var swiper2 = new Swiper(".swiper2", {
+const swiper2 = new Swiper(".swiper2", {
   slidesPerView: 1,
   spaceBetween: 0,
   slidesPerGroup: 1,
@@ -38,25 +50,25 @@ var swiper2 = new Swiper(".swiper2", {
 
 
 // 탭메뉴 - PRODUCT 섹션
-const tab_btns = document.querySelectorAll(".tab_pro > li");
-const tab_cont = document.querySelectorAll(".tab_cont .swiper-slide");
-const tab_btns_a = document.querySelectorAll(".tab_pro > li > a");
+const proBtns = document.querySelectorAll(".tab_pro > li");
+const proCont = document.querySelectorAll(".tab_pro .tab_cont .swiper-slide");
+const proBtns_a = document.querySelectorAll(".tab_pro > li > a");
 
-tab_btns_a.forEach((el,index)=>{
+proBtns_a.forEach((el,index)=>{
     el.addEventListener("focusin",()=>{
-        activation(tab_btns, index);
-        activation(tab_cont, index);
-    })
-})
+        activation(proBtns, index);
+        activation(proCont, index);
+    });
+});
 
-tab_btns.forEach((dt,index)=>{
+proBtns.forEach((dt,index)=>{
     dt.addEventListener("click",(e)=>{
         e.preventDefault();
         
-        activation(tab_btns,index);
-        activation(tab_cont,index);
-    })
-})
+        activation(proBtns,index);
+        activation(proCont,index);
+    });
+});
 
 function activation(arr,index){
     for(let el of arr){
@@ -67,7 +79,7 @@ function activation(arr,index){
 
 
 // swiper3 - EVENT 섹션
-var swiper3 = new Swiper(".swiper3", {
+const swiper3 = new Swiper(".swiper3", {
   slidesPerView: 1,
   spaceBetween: 0,
   slidesPerGroup: 1,

@@ -328,7 +328,6 @@ a {
     display: none;
   }
 }
-/* 비주얼 */
 #visual {
   margin-top: 80px;
 }
@@ -341,6 +340,53 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+#visual .swiper1 .swiper-pagination {
+  bottom: unset;
+  left: unset;
+  right: 60px;
+  top: 30%;
+  width: auto;
+  height: auto;
+}
+#visual .swiper1 .swiper-pagination .swiper-pagination-bullet {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  opacity: 0.4;
+  text-align: left;
+}
+#visual .swiper1 .swiper-pagination .swiper-pagination-bullet span {
+  display: inline-block;
+  vertical-align: middle;
+  font: 600 18px/1 "S-CoreDream";
+  color: #3c2121;
+  letter-spacing: -1px;
+  text-align: left;
+}
+#visual .swiper1 .swiper-pagination .swiper-pagination-bullet span.icon {
+  width: 57px;
+  height: 57px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 200%;
+  margin: 0 10px;
+}
+#visual .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-of-type(1) span.icon {
+  background-image: url(../img/main/slide_icon_1.png);
+}
+#visual .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-of-type(2) span.icon {
+  background-image: url(../img/main/slide_icon_2.png);
+}
+#visual .swiper1 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+#visual .swiper1 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active span.icon {
+  background-position: 100% 0;
 }
 
 #product {
@@ -378,10 +424,16 @@ a {
 #product .tab_pro > li > a {
   display: block;
   position: absolute;
-  top: -60px;
+  top: -100px;
   font: 400 16px/1 "Nunito Sans";
   color: #401e20;
   z-index: 1;
+  border: 2px solid #ee7868;
+  border-bottom: 0;
+  padding: 15px 0 13px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background: #ffefa4;
 }
 #product .tab_pro > li > a::after {
   content: "";
@@ -404,27 +456,28 @@ a {
   opacity: 1;
 }
 #product .tab_pro > li:nth-child(1) > a {
-  width: 80px;
-  left: calc(50% - 200px);
+  width: 90px;
+  left: calc(50% - 220px);
 }
 #product .tab_pro > li:nth-child(2) > a {
-  width: 120px;
-  left: calc(50% - 120px);
+  width: 130px;
+  left: calc(50% - 130px);
 }
 #product .tab_pro > li:nth-child(3) > a {
   width: 100px;
   left: 50%;
 }
 #product .tab_pro > li:nth-child(4) > a {
-  width: 100px;
+  width: 110px;
   left: calc(50% + 100px);
 }
 #product .tab_pro > li .tab_cont {
   display: none;
-  margin-top: 60px;
+  margin-top: 120px;
   overflow: hidden;
 }
 #product .tab_pro > li .tab_cont .swiper-slide a {
+  position: relative;
   display: block;
   width: 330px;
   margin: 0 auto;
@@ -432,7 +485,7 @@ a {
 #product .tab_pro > li .tab_cont .swiper-slide a img {
   display: block;
   width: 100%;
-  transition: 0.35s;
+  transition: 0.25s;
 }
 #product .tab_pro > li .tab_cont .swiper-slide a h3 {
   position: relative;
@@ -440,20 +493,28 @@ a {
   font: 600 22px/1 "S-CoreDream";
   color: #3c2121;
   letter-spacing: -1.5px;
-  background: #ee7868;
-  border: 2px solid #3c2121;
-  padding: 10px 27px 15px 20px;
+  padding: 14px 22px 12px 25px;
   margin-top: 20px;
-  z-index: 1;
 }
 #product .tab_pro > li .tab_cont .swiper-slide a h3::after {
   content: "";
   position: absolute;
-  left: -7px;
-  top: -7px;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background: #fff5d9;
+  border: 2px solid #3c2121;
+  z-index: -1;
+}
+#product .tab_pro > li .tab_cont .swiper-slide a h3::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  width: 100%;
+  height: 100%;
+  background: #ee7868;
   border: 2px solid #3c2121;
   z-index: -1;
 }
@@ -464,69 +525,84 @@ a {
   word-break: keep-all;
   margin-top: 20px;
 }
-#product .tab_pro > li .tab_cont .swiper-slide a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100%;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s;
 }
 #product .tab_pro > li .tab_cont .swiper-slide a:hover img {
   opacity: 0;
 }
-#product .tab_pro > li .tab_cont .slide1 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide a:hover::after {
+  opacity: 1;
+  z-index: 1;
+}
+#product .tab_pro > li .tab_cont .swiper-slide.slide1 a::after {
   background-image: url(../img/main/pro_1_on.png);
 }
-#product .tab_pro > li .tab_cont .slide2 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide2 a::after {
   background-image: url(../img/main/pro_2_on.png);
 }
-#product .tab_pro > li .tab_cont .slide3 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide3 a::after {
   background-image: url(../img/main/pro_3_on.png);
 }
-#product .tab_pro > li .tab_cont .slide4 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide4 a::after {
   background-image: url(../img/main/pro_4_on.png);
 }
-#product .tab_pro > li .tab_cont .slide5 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide5 a::after {
   background-image: url(../img/main/pro_5_on.png);
 }
-#product .tab_pro > li .tab_cont .slide6 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide6 a::after {
   background-image: url(../img/main/pro_6_on.png);
 }
-#product .tab_pro > li .tab_cont .slide7 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide7 a::after {
   background-image: url(../img/main/pro_7_on.png);
 }
-#product .tab_pro > li .tab_cont .slide8 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide8 a::after {
   background-image: url(../img/main/pro_8_on.png);
 }
-#product .tab_pro > li .tab_cont .slide9 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide9 a::after {
   background-image: url(../img/main/pro_9_on.png);
 }
-#product .tab_pro > li .tab_cont .slide10 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide10 a::after {
   background-image: url(../img/main/pro_10_on.png);
 }
-#product .tab_pro > li .tab_cont .slide11 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide11 a::after {
   background-image: url(../img/main/pro_11_on.png);
 }
-#product .tab_pro > li .tab_cont .slide12 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide12 a::after {
   background-image: url(../img/main/pro_12_on.png);
 }
-#product .tab_pro > li .tab_cont .slide13 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide13 a::after {
   background-image: url(../img/main/pro_13_on.png);
 }
-#product .tab_pro > li .tab_cont .slide14 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide14 a::after {
   background-image: url(../img/main/pro_14_on.png);
 }
-#product .tab_pro > li .tab_cont .slide15 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide15 a::after {
   background-image: url(../img/main/pro_15_on.png);
 }
-#product .tab_pro > li .tab_cont .slide16 a:hover {
+#product .tab_pro > li .tab_cont .swiper-slide.slide16 a::after {
   background-image: url(../img/main/pro_16_on.png);
 }
 #product .tab_pro > li .tab_cont .swiper-button-next {
-  top: 40%;
+  top: 35%;
   right: -30px;
+  color: #f52334;
 }
 #product .tab_pro > li .tab_cont .swiper-button-prev {
-  top: 40%;
+  top: 35%;
   left: -30px;
+  color: #f52334;
 }
 #product .tab_pro > li.on > a {
   font: 700 16px/1 "Nunito Sans";
@@ -712,13 +788,17 @@ a {
   display: flex;
   border-top: 2px solid #000;
   padding: 30px;
+  transition: 0.5s;
 }
-#news ul li a {
+#news ul li:nth-child(2) {
+  border-bottom: 2px solid #000;
+}
+#news ul li > a {
   display: block;
   width: 310px;
   flex-shrink: 0;
 }
-#news ul li a img {
+#news ul li > a img {
   display: block;
   width: 100%;
 }
@@ -726,6 +806,7 @@ a {
   padding-left: 25px;
   width: calc(100% - 310px);
   text-align: left;
+  flex-grow: 1;
 }
 #news ul li .news_cont span {
   display: inline-block;
@@ -744,20 +825,181 @@ a {
 #news ul li .news_cont p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   overflow: hidden;
   font: 300 17px/1.4 "Noto Sans KR";
   color: #401e20;
   letter-spacing: -0.5px;
+  margin-bottom: 25px;
+}
+#news ul li .news_cont a {
+  display: inline-block;
+  font: 700 16px/1 "Nunito Sans";
+  color: #4a4a4a;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #494949;
+  transition: 0.5s;
+}
+#news ul li:hover {
+  background: #ffd1c3;
+}
+#news ul li:hover .news_cont a {
+  color: #f52334;
+  border-bottom: 1px solid #f52334;
+}
+#news .btn_news {
+  margin-top: 40px;
+}
+#news .btn_news a {
+  position: relative;
+  display: inline-block;
+  width: 287px;
+  height: 60px;
+  max-width: 287px;
+  background: #f52334;
+  border-radius: 36px;
+  border: solid 3px #f52334;
+  font-family: "Nunito Sans";
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 55px;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
 }
 
+#video {
+  position: relative;
+  background: #fff5c6;
+  overflow: hidden;
+}
+#video::before {
+  content: "";
+  display: block;
+  width: 1260px;
+  height: 1260px;
+  position: Absolute;
+  top: -58%;
+  left: -11%;
+  background: #ffefa4;
+  opacity: 0.6;
+  border-radius: 100%;
+}
+#video .inner {
+  padding: 130px 0;
+  text-align: center;
+}
+#video h2 {
+  position: relative;
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 50px;
+  color: #f52334;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+}
+#video h2:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #f52334;
+  bottom: -5px;
+  left: 0;
+  transition: 0.5s;
+}
+#video .vid_wrap {
+  width: 1400px;
+  margin: 30px auto;
+  display: flex;
+}
+#video .vid_wrap .vid_left {
+  position: relative;
+  height: 566px;
+  flex-shrink: 0;
+  flex-basis: 60%;
+}
+#video .vid_wrap .vid_left article {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+#video .vid_wrap .vid_left article > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#video .vid_wrap .vid_left article > a > iframe {
+  width: 100%;
+  height: 100%;
+}
+#video .vid_wrap .vid_left article > a > .btn_play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 133px;
+  height: 132px;
+  background: url(../img/main/btn_play.png) no-repeat;
+  border: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+#video .vid_wrap .vid_left article > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#video .vid_wrap .vid_left article.on {
+  display: block;
+}
+#video .vid_wrap .vid_left article.vid_1 > a::after {
+  background: url(../img/main/video_img_1.jpg) no-repeat center/cover;
+}
+#video .vid_wrap .vid_left article.vid_2 > a::after {
+  background: url(../img/main/video_img_2.jpg) no-repeat center/cover;
+}
+#video .vid_wrap .vid_right .tit_video .txt {
+  font: 700 25px/1 "S-CoreDream";
+  color: #3C2121;
+  border: 3px solid #3C2121;
+  border-radius: 3px;
+  text-align: center;
+}
 /* 미디어쿼리 */
 @media screen and (max-width: 1659px) {
   #product .row {
-    width: 1100px;
+    width: 1000px;
+  }
+  #product .tab_pro > li .tab_cont .swiper-slide a {
+    width: 300px;
   }
 }
 @media screen and (max-width: 1499px) {
+  #visual .swiper1 .swiper-pagination {
+    bottom: 5%;
+    left: 50%;
+    top: unset;
+    transform: translateX(-50%);
+    width: 100%;
+    margin-bottom: 0;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet {
+    display: inline-block;
+    width: auto;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet:first-child {
+    margin-right: 40px;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span.icon {
+    margin: 0 5px;
+  }
   #event .row {
     width: 1000px;
   }
@@ -766,17 +1008,55 @@ a {
   }
 }
 @media screen and (max-width: 1199px) {
+  #visual .swiper1 .swiper-pagination {
+    bottom: 5%;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet:first-child {
+    margin-right: 15px;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span.icon {
+    width: 45px;
+    height: 45px;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span:nth-child(3) {
+    display: none;
+  }
   #product .row {
-    width: 800px;
+    width: 660px;
   }
   #event .row {
     width: 650px;
   }
 }
 @media screen and (max-width: 899px) {
+  #visual .swiper1 .swiper-pagination {
+    bottom: 2%;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet:first-child {
+    margin-right: 0;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span {
+    font: 600 15px/1 "S-CoreDream";
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span:nth-child(1) {
+    display: none;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span.icon {
+    width: 12px;
+    height: 12px;
+    background-color: #f7b34e;
+    border-radius: 100%;
+    margin: 0 2px;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-of-type(1) span.icon {
+    background-image: none;
+  }
+  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-of-type(2) span.icon {
+    background-image: none;
+  }
   #product .row {
     width: 100%;
-    max-width: 500px;
+    max-width: 350px;
   }
   #event .row {
     width: 100%;
@@ -787,8 +1067,20 @@ a {
   }
 }
 @media screen and (max-width: 600px) {
+  #product .row {
+    max-width: 280px;
+  }
   #product .tab_pro > li .tab_cont .swiper-slide a {
-    width: 300px;
+    width: 250px;
+  }
+  #product .tab_pro > li .tab_cont .swiper-slide a h3 {
+    margin-top: 0;
+  }
+  #product .tab_pro > li .tab_cont .swiper-button-next {
+    top: 30%;
+  }
+  #product .tab_pro > li .tab_cont .swiper-button-prev {
+    top: 30%;
   }
   #event .row {
     width: 100%;
@@ -796,6 +1088,18 @@ a {
   }
   #event .swiper-slide > a {
     width: 300px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #product .row {
+    max-width: 250px;
+  }
+  #product .tab_pro > li .tab_cont .swiper-slide a {
+    width: 230px;
+  }
+  #product .tab_pro > li .tab_cont .swiper-slide a h3 {
+    font: 600 18px/1 "S-CoreDream";
+    padding: 12px 20px 9px 22px;
   }
 }
 

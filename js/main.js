@@ -93,7 +93,11 @@ const swiper3 = new Swiper(".swiper3", {
 
     1200: { //1200보다 커졌을 때
       slidesPerView: 3
-    }
+    },
+
+    1660: { //1660보다 커졌을 때
+      slidesPerView: 4
+    },
   },
   navigation: {
     nextEl: ".swiper-button-next",

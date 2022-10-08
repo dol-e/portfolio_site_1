@@ -394,7 +394,7 @@ a {
 }
 #product .row {
   width: 1420px;
-  padding: 130px 0;
+  padding: 130px 0 80px;
   text-align: center;
   margin: 0 auto;
 }
@@ -422,58 +422,64 @@ a {
   position: relative;
 }
 #product .tab_pro > li > a {
-  display: block;
+  display: inline-block;
   position: absolute;
-  top: -100px;
-  font: 400 16px/1 "Nunito Sans";
-  color: #401e20;
-  z-index: 1;
-  border: 2px solid #ee7868;
-  border-bottom: 0;
-  padding: 15px 0 13px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  top: -90px;
+  font: 700 16px/1 "Nunito Sans";
+  color: #3c2121;
+  border: 2px solid #ffefa4;
+  border-radius: 25px;
   background: #ffefa4;
+  padding: 5px 0 3px;
+  transition: 0.35s;
 }
-#product .tab_pro > li > a::after {
+#product .tab_pro > li > a::before {
   content: "";
-  position: absolute;
-  width: 54px;
-  height: 54px;
-  background: #ffe001;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s;
-  z-index: -1;
-  opacity: 0;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  margin-right: 2px;
+  margin-bottom: 5px;
+  vertical-align: middle;
 }
 #product .tab_pro > li > a:hover {
-  font: 700 16px/1 "Nunito Sans";
-}
-#product .tab_pro > li > a:hover::after {
-  opacity: 1;
+  background: #fae47e;
+  border: 2px solid #ee7868;
 }
 #product .tab_pro > li:nth-child(1) > a {
-  width: 90px;
-  left: calc(50% - 220px);
+  width: 120px;
+  left: calc(50% - 310px);
 }
 #product .tab_pro > li:nth-child(2) > a {
-  width: 130px;
-  left: calc(50% - 130px);
+  width: 170px;
+  left: calc(50% - 180px);
 }
 #product .tab_pro > li:nth-child(3) > a {
-  width: 100px;
+  width: 150px;
   left: 50%;
 }
 #product .tab_pro > li:nth-child(4) > a {
-  width: 110px;
-  left: calc(50% + 100px);
+  width: 140px;
+  left: calc(50% + 160px);
+}
+#product .tab_pro > li:nth-child(1) > a::before {
+  background-image: url(../img/main/list_icon_1.png);
+}
+#product .tab_pro > li:nth-child(2) > a::before {
+  background-image: url(../img/main/list_icon_2.png);
+}
+#product .tab_pro > li:nth-child(3) > a::before {
+  background-image: url(../img/main/list_icon_3.png);
+}
+#product .tab_pro > li:nth-child(4) > a::before {
+  background-image: url(../img/main/list_icon_4.png);
 }
 #product .tab_pro > li .tab_cont {
   display: none;
-  margin-top: 120px;
+  margin-top: 100px;
   overflow: hidden;
 }
 #product .tab_pro > li .tab_cont .swiper-slide a {
@@ -595,30 +601,28 @@ a {
   background-image: url(../img/main/pro_16_on.png);
 }
 #product .tab_pro > li .tab_cont .swiper-button-next {
-  top: 35%;
+  top: 40%;
   right: -30px;
   color: #f52334;
 }
 #product .tab_pro > li .tab_cont .swiper-button-prev {
-  top: 35%;
+  top: 40%;
   left: -30px;
   color: #f52334;
 }
 #product .tab_pro > li.on > a {
-  font: 700 16px/1 "Nunito Sans";
-}
-#product .tab_pro > li.on > a::after {
-  opacity: 1;
+  background: #fae47e;
+  border: 2px solid #ee7868;
 }
 #product .tab_pro > li.on .tab_cont {
   display: block;
 }
 #product .btn_pro {
-  display: inline-block;
-  margin-top: 50px;
+  padding-bottom: 130px;
+  text-align: center;
 }
 #product .btn_pro ul {
-  display: flex;
+  display: inline-flex;
 }
 #product .btn_pro ul li:first-child {
   margin-right: 30px;
@@ -628,15 +632,14 @@ a {
   display: inline-block;
   width: 287px;
   height: 60px;
-  max-width: 287px;
   border-radius: 36px;
   border: solid 3px #f52334;
   font-family: "Nunito Sans";
   color: #f52334;
   font-size: 18px;
   font-weight: 700;
-  line-height: 55px;
-  text-align: center;
+  line-height: 3;
+  vertical-align: middle;
   z-index: 1;
   overflow: hidden;
 }
@@ -645,7 +648,6 @@ a {
   display: inline-block;
   width: 287px;
   height: 60px;
-  max-width: 287px;
   background: #f52334;
   border-radius: 36px;
   border: solid 3px #f52334;
@@ -653,18 +655,18 @@ a {
   color: #fff;
   font-size: 18px;
   font-weight: 700;
-  line-height: 55px;
+  line-height: 3;
   text-align: center;
   z-index: 1;
   overflow: hidden;
 }
 
 #event {
-  background: #ffdcd1;
+  background: #def1ee;
 }
 #event .row {
   position: relative;
-  width: 1300px;
+  width: 1420px;
   padding: 130px 0;
   text-align: center;
   margin: 0 auto;
@@ -693,64 +695,138 @@ a {
   margin-top: 50px;
 }
 #event .swiper-slide {
-  padding-bottom: 40px;
+  padding-bottom: 150px;
 }
 #event .swiper-slide > a {
   position: relative;
   display: block;
-  width: 400px;
+  width: 330px;
   margin: 0 auto;
 }
+#event .swiper-slide > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 13px;
+  background: #ee7868;
+  z-index: 1;
+  transition: 0.75s;
+}
+#event .swiper-slide > a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 13px;
+  background: #ee7868;
+  z-index: 1;
+  transition: 0.75s;
+}
 #event .swiper-slide > a img {
+  position: relative;
   display: block;
   width: 100%;
   transition: 0.35s;
   transform: scale(0.85);
 }
-#event .swiper-slide > a figcaption {
+#event .swiper-slide > a img::after {
+  content: "";
   position: absolute;
   left: 0;
-  bottom: -100px;
+  top: 0;
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  z-index: 10;
+}
+#event .swiper-slide > a figure::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 13px;
+  height: 0;
+  background: #ee7868;
+  z-index: 1;
+  transition: 0.75s;
+}
+#event .swiper-slide > a figure::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 13px;
+  height: 0;
+  background: #ee7868;
+  z-index: 1;
+  transition: 0.75s;
+}
+#event .swiper-slide > a figure figcaption {
+  position: absolute;
+  left: 0;
+  bottom: -300px;
   width: 100%;
+  height: 140px;
   background: #3c2121;
-  padding: 20px 20px 60px;
-  transform: scale(1.1);
+  padding: 30px;
   opacity: 0;
   transition: 0.35s;
 }
-#event .swiper-slide > a figcaption p {
+#event .swiper-slide > a figure figcaption p {
   font: 400 18px/1.4 "S-CoreDream";
   color: #fff;
   text-align: left;
   word-break: keep-all;
 }
-#event .swiper-slide > a figcaption p::after {
+#event .swiper-slide > a figure figcaption p::after {
   content: "";
   position: absolute;
-  left: 20px;
+  left: 30px;
   bottom: -20px;
   width: 30px;
   height: 14px;
   background: url(../img/main/arrow_cont.png) no-repeat;
-  transition: 0.35s 0.25s;
+  transition: 0.35s 0.35s;
+}
+#event .swiper-slide > a:hover::before {
+  width: 100%;
+}
+#event .swiper-slide > a:hover::after {
+  width: 100%;
 }
 #event .swiper-slide > a:hover img {
-  transform: scale(1.1);
+  transform: scale(1);
 }
-#event .swiper-slide > a:hover figcaption {
-  bottom: -30px;
+#event .swiper-slide > a:hover figure {
+  border-top-width: 13px;
+  border-bottom-width: 13px;
+}
+#event .swiper-slide > a:hover figure::before {
+  height: 100%;
+}
+#event .swiper-slide > a:hover figure::after {
+  height: 100%;
+}
+#event .swiper-slide > a:hover figure figcaption {
+  bottom: -140px;
   opacity: 1;
 }
-#event .swiper-slide > a:hover figcaption p::after {
-  bottom: 25px;
+#event .swiper-slide > a:hover figure figcaption p::after {
+  bottom: 30px;
 }
 #event .swiper-button-next {
-  top: 55%;
-  right: -40px;
+  top: 50%;
+  right: -30px;
+  color: #f52334;
 }
 #event .swiper-button-prev {
-  top: 55%;
-  left: -40px;
+  top: 50%;
+  left: -30px;
+  color: #f52334;
 }
 
 #news {
@@ -855,7 +931,6 @@ a {
   display: inline-block;
   width: 287px;
   height: 60px;
-  max-width: 287px;
   background: #f52334;
   border-radius: 36px;
   border: solid 3px #f52334;
@@ -863,7 +938,7 @@ a {
   color: #fff;
   font-size: 18px;
   font-weight: 700;
-  line-height: 55px;
+  line-height: 3;
   text-align: center;
   z-index: 1;
   overflow: hidden;
@@ -980,6 +1055,9 @@ a {
   #product .tab_pro > li .tab_cont .swiper-slide a {
     width: 300px;
   }
+  #event .row {
+    width: 1050px;
+  }
 }
 @media screen and (max-width: 1499px) {
   #visual .swiper1 .swiper-pagination {
@@ -1000,12 +1078,6 @@ a {
   #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span.icon {
     margin: 0 5px;
   }
-  #event .row {
-    width: 1000px;
-  }
-  #event .swiper-slide > a {
-    width: 300px;
-  }
 }
 @media screen and (max-width: 1199px) {
   #visual .swiper1 .swiper-pagination {
@@ -1024,8 +1096,103 @@ a {
   #product .row {
     width: 660px;
   }
+  #product .tab_pro > li > a {
+    top: -80px;
+    padding: 10px 0 8px;
+  }
+  #product .tab_pro > li > a::before {
+    display: none;
+  }
+  #product .tab_pro > li:nth-child(1) > a {
+    width: 100px;
+    left: calc(50% - 270px);
+  }
+  #product .tab_pro > li:nth-child(2) > a {
+    width: 150px;
+    left: calc(50% - 160px);
+  }
+  #product .tab_pro > li:nth-child(3) > a {
+    width: 130px;
+    left: 50%;
+  }
+  #product .tab_pro > li:nth-child(4) > a {
+    width: 120px;
+    left: calc(50% + 140px);
+  }
+  #product .tab_pro > li .tab_cont {
+    margin-top: 80px;
+  }
+  #product .btn_pro ul li:first-child a {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 52px;
+    border-radius: 36px;
+    border: solid 3px #f52334;
+    font-family: "Nunito Sans";
+    color: #f52334;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 3;
+    vertical-align: middle;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #product .btn_pro ul li:last-child a {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 52px;
+    background: #f52334;
+    border-radius: 36px;
+    border: solid 3px #f52334;
+    font-family: "Nunito Sans";
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 3;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+  }
   #event .row {
-    width: 650px;
+    width: 680px;
+  }
+  #event .swiper-slide > a {
+    width: 300px;
+  }
+  #event .swiper-slide > a::before {
+    display: none;
+  }
+  #event .swiper-slide > a::after {
+    display: none;
+  }
+  #event .swiper-slide > a img {
+    transform: scale(1);
+  }
+  #event .swiper-slide > a figure::before {
+    display: none;
+  }
+  #event .swiper-slide > a figure::after {
+    display: none;
+  }
+  #event .swiper-slide > a figure figcaption {
+    height: 120px;
+    padding: 20px;
+    bottom: -120px;
+    opacity: 1;
+  }
+  #event .swiper-slide > a figure figcaption p::after {
+    display: none;
+  }
+  #event .swiper-slide > a:hover figure figcaption {
+    bottom: -120px;
+  }
+  #event .swiper-button-next {
+    top: 55%;
+  }
+  #event .swiper-button-prev {
+    top: 55%;
   }
 }
 @media screen and (max-width: 899px) {
@@ -1058,33 +1225,139 @@ a {
     width: 100%;
     max-width: 350px;
   }
+  #product h2 {
+    position: relative;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-size: 40px;
+    color: #f52334;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 30px;
+  }
+  #product .tab_pro > li > a {
+    top: -70px;
+    font: 500 14px/1 "Nunito Sans";
+  }
+  #product .tab_pro > li:nth-child(1) > a {
+    width: 80px;
+    left: calc(50% - 240px);
+  }
+  #product .tab_pro > li:nth-child(2) > a {
+    width: 140px;
+    left: calc(50% - 150px);
+  }
+  #product .tab_pro > li:nth-child(3) > a {
+    width: 110px;
+    left: 50%;
+  }
+  #product .tab_pro > li:nth-child(4) > a {
+    width: 100px;
+    left: calc(50% + 120px);
+  }
+  #product .tab_pro > li .tab_cont {
+    margin-top: 70px;
+  }
   #event .row {
     width: 100%;
-    max-width: 500px;
+    max-width: 350px;
+  }
+  #event h2 {
+    position: relative;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-size: 40px;
+    color: #f52334;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 30px;
   }
   #event .swiper-slide > a {
-    width: 400px;
+    width: 330px;
+  }
+  #news h2 {
+    position: relative;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-size: 40px;
+    color: #f52334;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 600px) {
   #product .row {
     max-width: 280px;
   }
+  #product .tab_pro > li > a {
+    top: -60px;
+    font: 500 12px/1 "Nunito Sans";
+  }
+  #product .tab_pro > li:nth-child(1) > a {
+    width: 50px;
+    left: calc(53% - 160px);
+  }
+  #product .tab_pro > li:nth-child(2) > a {
+    width: 90px;
+    left: calc(53% - 100px);
+  }
+  #product .tab_pro > li:nth-child(3) > a {
+    width: 70px;
+    left: 53%;
+  }
+  #product .tab_pro > li:nth-child(4) > a {
+    width: 60px;
+    left: calc(53% + 80px);
+  }
+  #product .tab_pro > li .tab_cont {
+    margin-top: 60px;
+  }
   #product .tab_pro > li .tab_cont .swiper-slide a {
     width: 250px;
   }
   #product .tab_pro > li .tab_cont .swiper-slide a h3 {
-    margin-top: 0;
+    margin-top: 10px;
   }
-  #product .tab_pro > li .tab_cont .swiper-button-next {
-    top: 30%;
+  #product .btn_pro ul li:first-child {
+    margin-right: 20px;
   }
-  #product .tab_pro > li .tab_cont .swiper-button-prev {
-    top: 30%;
+  #product .btn_pro ul li:first-child a {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 48px;
+    border-radius: 36px;
+    border: solid 3px #f52334;
+    font-family: "Nunito Sans";
+    color: #f52334;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 3;
+    vertical-align: middle;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #product .btn_pro ul li:last-child a {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 48px;
+    background: #f52334;
+    border-radius: 36px;
+    border: solid 3px #f52334;
+    font-family: "Nunito Sans";
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 3;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
   }
   #event .row {
     width: 100%;
-    max-width: 500px;
+    max-width: 320px;
   }
   #event .swiper-slide > a {
     width: 300px;
@@ -1100,6 +1373,65 @@ a {
   #product .tab_pro > li .tab_cont .swiper-slide a h3 {
     font: 600 18px/1 "S-CoreDream";
     padding: 12px 20px 9px 22px;
+  }
+  #product .tab_pro > li .tab_cont .swiper-button-next {
+    top: 35%;
+  }
+  #product .tab_pro > li .tab_cont .swiper-button-prev {
+    top: 35%;
+  }
+  #product .btn_pro ul li:first-child {
+    margin-right: 10px;
+  }
+  #product .btn_pro ul li:first-child a {
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    height: 48px;
+    border-radius: 36px;
+    border: solid 3px #f52334;
+    font-family: "Nunito Sans";
+    color: #f52334;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 3;
+    vertical-align: middle;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #product .btn_pro ul li:last-child a {
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    height: 48px;
+    background: #f52334;
+    border-radius: 36px;
+    border: solid 3px #f52334;
+    font-family: "Nunito Sans";
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 3;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #event .row {
+    width: 100%;
+    max-width: 250px;
+  }
+  #event .swiper-slide > a {
+    width: 230px;
+  }
+  #event .swiper-slide > a figure figcaption {
+    height: 100px;
+    bottom: -100px;
+  }
+  #event .swiper-slide > a figure figcaption p {
+    font: 400 16px/1.4 "S-CoreDream";
+  }
+  #event .swiper-slide > a:hover figure figcaption {
+    bottom: -100px;
   }
 }
 

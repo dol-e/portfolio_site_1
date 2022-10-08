@@ -1,13 +1,13 @@
 
-@mixin sec_tit() {
+@mixin sec_tit($fontSize: 50px, $marginBottom: 40px) {
   position: relative;
   display: inline-block;
   font-family: 'Montserrat';
-  font-size: 50px;
+  font-size: $fontSize;
   color: #f52334;
   font-weight: 900;
   letter-spacing: -0.5px;
-  margin-bottom: 40px;
+  margin-bottom: $marginBottom;
 }
 
 @mixin sec_tit_line() {
@@ -21,37 +21,35 @@
   transition: .5s;
 }
 
-@mixin btn_white() {
+@mixin btn_white($width: 287px, $height: 60px, $fontSize: 18px) {
   position: relative;
   display: inline-block;
-  width: 287px; height: 60px;  max-width: 287px;
+  width: $width; height: $height;
   border-radius: 36px;
   border: solid 3px #f52334;
   font-family: 'Nunito Sans';
   color: #f52334;
-  font-size: 18px;
+  font-size: $fontSize;
   font-weight: 700;
-  line-height: 55px;
-  text-align: center;
+  line-height: 3;
+  vertical-align: middle;
   z-index: 1;
   overflow: hidden;
 }
 
-@mixin btn_red() {
+@mixin btn_red($width: 287px, $height: 60px, $fontSize: 18px) {
   position: relative;
   display: inline-block;
-  width: 287px; height: 60px;  max-width: 287px;
+  width: $width; height: $height;
   background: #f52334;
   border-radius: 36px;
   border: solid 3px #f52334;
   font-family: 'Nunito Sans';
   color: #fff;
-  font-size: 18px;
+  font-size: $fontSize;
   font-weight: 700;
-  line-height: 55px;
+  line-height: 3;
   text-align: center;
   z-index: 1;
   overflow: hidden;
 }
-
-

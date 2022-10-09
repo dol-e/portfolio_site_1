@@ -38,13 +38,3 @@
       url('../font/SCDream6.woff') format('woff'),
       url('../font/SCDream6.otf') format('opentype');
 }
-
-/* 노토산스 KR - Light */
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-weight: 300;
-  src: url('../font/NotoSansKR-Light.eot');
-  src: url('../font/NotoSansKR-Light.eot?#iefix') format('embedded-opentype'),
-  url('../font/NotoSansKR-Light.woff') format('woff'),
-  url('../font/NotoSansKR-Light.woff2') format('woff2');
-}

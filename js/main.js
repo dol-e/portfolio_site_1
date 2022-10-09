@@ -1,3 +1,35 @@
+
+// 이미지 경로 변경 - 비주얼 영역
+const mediaQuery = window.matchMedia('(max-width: 750px)');
+const visualSlide = document.querySelectorAll(".swiper1 .swiper-slide");
+const imgInfo = [
+  {fileName: "visual_1", alt: "22.10.07 ~ 10.17 바베큐 풀드포크 구매 시 유인 아메리카노 증정 & 무인 즉시 할인!"},
+  {fileName: "visual_2", alt: "헤이즐넛과 함께 더 진해져서 돌아온 RENEWAL 초코퐁당 샌드위치"}
+];
+
+function handleImgSrc(e) {
+
+  visualSlide.forEach((el,index)=>{
+
+    let fileName ="";
+
+    if (e.matches) {
+      fileName = `${imgInfo[index].fileName}_m`;
+    } else {
+      fileName = imgInfo[index].fileName;
+    }
+    
+    const $imgHtml = `<img src="img/main/${fileName}.png" alt="${imgInfo[index].alt}">`;
+    el.innerHTML = $imgHtml;
+  });
+
+}
+
+mediaQuery.addListener(handleImgSrc);
+handleImgSrc(mediaQuery);
+
+
+
 // swiper1 - 비주얼 영역
 const bullet = ['바베큐 풀드포크', '초코퐁당 샌드위치'];
 const swiper1 = new Swiper(".swiper1", {
@@ -38,7 +70,7 @@ const swiper2 = new Swiper(".swiper2", {
       slidesPerView: 3
     },
 
-    1660: { //1660보다 커졌을 때
+    1600: { //1600보다 커졌을 때
       slidesPerView: 4
     },
   },
@@ -95,7 +127,7 @@ const swiper3 = new Swiper(".swiper3", {
       slidesPerView: 3
     },
 
-    1660: { //1660보다 커졌을 때
+    1600: { //1600보다 커졌을 때
       slidesPerView: 4
     },
   },

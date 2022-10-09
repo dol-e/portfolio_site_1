@@ -2,6 +2,8 @@
 /* 폰트 파일 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 /* 에스코어드림 라이트 */
 @font-face {
   font-family: "S-CoreDream";
@@ -29,13 +31,6 @@
   font-weight: 600;
   src: url("../font/SCDream6.eot");
   src: url("../font/SCDream6.eot?#iefix") format("embedded-opentype"), url("../font/SCDream6.woff") format("woff"), url("../font/SCDream6.otf") format("opentype");
-}
-/* 노토산스 KR - Light */
-@font-face {
-  font-family: "Noto Sans KR";
-  font-weight: 300;
-  src: url("../font/NotoSansKR-Light.eot");
-  src: url("../font/NotoSansKR-Light.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Light.woff") format("woff"), url("../font/NotoSansKR-Light.woff2") format("woff2");
 }
 /* css 파일 */
 * {
@@ -109,10 +104,9 @@ a {
 .inner {
   position: relative;
   width: 100%;
-  max-width: 1660px;
+  max-width: 1600px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 30px;
 }
 
 .sub_bg {
@@ -167,10 +161,10 @@ a {
 #header .menu_web #gnb {
   height: inherit;
   display: inline-flex;
-  margin-left: 250px;
+  margin-left: 270px;
 }
 #header .menu_web #gnb > li {
-  padding: 30px 10px 0;
+  padding: 30px 15px 0;
 }
 #header .menu_web #gnb > li > a {
   font: 500 17px/1 "S-CoreDream";
@@ -179,21 +173,22 @@ a {
 }
 #header .menu_web #gnb > li .sub_menu {
   display: none;
-  flex-wrap: wrap;
   position: absolute;
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
   width: calc(100% - 180px);
   height: 300px;
+  padding-top: 30px;
   transition: 0.35s;
 }
 #header .menu_web #gnb > li .sub_menu h3 {
+  display: inline-block;
+  vertical-align: top;
   font: 500 25px/1 "S-CoreDream";
   letter-spacing: -0.5px;
   color: #000;
-  padding: 30px 0;
-  flex: 1;
+  margin-right: 25px;
 }
 #header .menu_web #gnb > li .sub_menu h3::after {
   content: "";
@@ -202,11 +197,10 @@ a {
   height: 1px;
   background: #999;
   vertical-align: middle;
-  margin: 0 0 5px 20px;
+  margin: 0 0 5px 30px;
 }
 #header .menu_web #gnb > li .sub_menu ul {
-  padding: 30px 0;
-  flex: 1;
+  display: inline-block;
 }
 #header .menu_web #gnb > li .sub_menu ul li {
   margin-bottom: 15px;
@@ -224,14 +218,15 @@ a {
   color: #f52334;
 }
 #header .menu_web #gnb > li .sub_menu img {
-  width: 100%;
-  max-width: 990px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
   height: 100%;
   object-fit: contain;
-  flex: 1;
 }
 #header .menu_web #gnb > li.on .sub_menu {
-  display: flex;
+  display: block;
   animation: opacity 1s;
 }
 #header .util {
@@ -280,11 +275,104 @@ a {
   display: none;
 }
 
+/* 푸터 */
+#footer {
+  background: #3b2120;
+}
+#footer .foot_box_1 .inner {
+  padding: 0 30px;
+}
+#footer .foot_box_1 .foot_menu {
+  position: absolute;
+  left: 198px;
+  top: 50px;
+  z-index: 1;
+}
+#footer .foot_box_1 .foot_menu ul li {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+#footer .foot_box_1 .foot_menu ul li a {
+  display: block;
+  font: 300 18px/1.5 "S-CoreDream";
+  letter-spacing: -0.5px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.35s;
+}
+#footer .foot_box_1 .foot_menu ul li a:hover {
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid #fff;
+}
+#footer .foot_box_1 .foot_menu ul li::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.2);
+}
+#footer .foot_box_1 .foot_menu ul li:last-child::after {
+  display: none;
+}
+#footer .foot_box_2 .inner {
+  padding: 50px 30px 45px;
+}
+#footer .foot_box_2 .foot_logo {
+  display: inline-block;
+}
+#footer .foot_box_2 .foot_logo a {
+  display: block;
+}
+#footer .foot_box_2 .foot_logo a img {
+  width: 130px;
+}
+#footer .foot_box_2 .sns_menu {
+  position: absolute;
+  right: 30px;
+  top: 45px;
+}
+#footer .foot_box_2 .sns_menu ul {
+  display: flex;
+}
+#footer .foot_box_2 .sns_menu ul li {
+  margin-right: 15px;
+}
+#footer .foot_box_2 .sns_menu ul li a {
+  display: block;
+}
+#footer .foot_box_2 .sns_menu ul li:last-child {
+  margin-right: 0;
+}
+#footer .foot_box_2 .foot_txt {
+  display: inline-block;
+  margin-left: 50px;
+}
+#footer .foot_box_2 .foot_txt p {
+  font: 300 15px/1.4 "Noto Sans KR";
+  color: rgba(255, 255, 255, 0.4);
+}
+#footer .foot_box_2 .foot_txt address {
+  font: 300 15px/1.4 "Noto Sans KR";
+  color: rgba(255, 255, 255, 0.4);
+}
+#footer .foot_copy {
+  background: #2d1817;
+  padding: 15px 0;
+  text-align: center;
+}
+#footer .foot_copy p {
+  font: 300 14px/1.3 "Roboto";
+  color: rgba(255, 255, 255, 0.4);
+}
+
 /* 미디어쿼리 */
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1599px) {
   /* 전체 레이아웃 */
   .sub_bg.on {
-    height: 242px;
+    height: 200px;
   }
   /* 헤더 */
   #header h1.logo img {
@@ -298,14 +386,7 @@ a {
     height: 200px;
   }
   #header .menu_web #gnb > li .sub_menu h3 {
-    padding: 20px 0;
     font: 500 22px/1 "S-CoreDream";
-  }
-  #header .menu_web #gnb > li .sub_menu h3::after {
-    display: none;
-  }
-  #header .menu_web #gnb > li .sub_menu ul {
-    padding: 22px 0;
   }
   #header .menu_web #gnb > li .sub_menu ul li {
     margin-bottom: 12px;
@@ -316,16 +397,51 @@ a {
   #header .menu_web #gnb > li .sub_menu ul li a:hover {
     font: 500 18px/1 "S-CoreDream";
   }
-  #header .menu_web #gnb > li .sub_menu img {
-    max-width: 700px;
-    height: auto;
-    align-self: flex-start;
-  }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   /* 헤더 */
   #header .menu_web {
     display: none;
+  }
+  /* 푸터 */
+  #footer .foot_box_1 {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+  #footer .foot_box_1 .foot_menu {
+    position: static;
+  }
+  #footer .foot_box_2 {
+    text-align: center;
+  }
+  #footer .foot_box_2 .inner {
+    padding: 30px;
+  }
+  #footer .foot_box_2 .foot_logo {
+    display: block;
+  }
+  #footer .foot_box_2 .foot_logo a img {
+    width: 120px;
+  }
+  #footer .foot_box_2 .sns_menu {
+    position: static;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  #footer .foot_box_2 .foot_txt {
+    display: block;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #footer .foot_box_1 .foot_menu ul li {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  #footer .foot_box_1 .foot_menu ul li a {
+    font: 300 15px/1.5 "S-CoreDream";
   }
 }
 #visual {
@@ -335,30 +451,40 @@ a {
   width: 100%;
   height: 100%;
 }
+#visual .swiper1 .swiper-slide.slide1 {
+  background: #f0e7d6;
+}
+#visual .swiper1 .swiper-slide.slide2 {
+  background: #bd7c65;
+}
 #visual .swiper1 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
+  max-width: 1660px;
+  height: calc(100vh - 80px);
   object-fit: cover;
+  margin: 0 auto;
 }
 #visual .swiper1 .swiper-pagination {
-  bottom: unset;
-  left: unset;
-  right: 60px;
-  top: 30%;
-  width: auto;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   height: auto;
+  margin-bottom: 0;
 }
 #visual .swiper1 .swiper-pagination .swiper-pagination-bullet {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: auto;
   height: auto;
   background: transparent;
   border-radius: 0;
   margin: 0;
-  margin-bottom: 20px;
   opacity: 0.4;
   text-align: left;
+}
+#visual .swiper1 .swiper-pagination .swiper-pagination-bullet:first-child {
+  margin-right: 40px;
 }
 #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span {
   display: inline-block;
@@ -369,12 +495,12 @@ a {
   text-align: left;
 }
 #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span.icon {
-  width: 57px;
-  height: 57px;
+  width: 50px;
+  height: 50px;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 200%;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 #visual .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-of-type(1) span.icon {
   background-image: url(../img/main/slide_icon_1.png);
@@ -394,7 +520,7 @@ a {
 }
 #product .row {
   width: 1420px;
-  padding: 130px 0 80px;
+  padding: 130px 0 60px;
   text-align: center;
   margin: 0 auto;
 }
@@ -403,7 +529,7 @@ a {
   display: inline-block;
   font-family: "Montserrat";
   font-size: 50px;
-  color: #f52334;
+  color: #CE403D;
   font-weight: 900;
   letter-spacing: -0.5px;
   margin-bottom: 40px;
@@ -413,7 +539,7 @@ a {
   position: absolute;
   width: 100%;
   height: 4px;
-  background: #f52334;
+  background: #CE403D;
   bottom: -5px;
   left: 0;
   transition: 0.5s;
@@ -447,7 +573,7 @@ a {
 }
 #product .tab_pro > li > a:hover {
   background: #fae47e;
-  border: 2px solid #ee7868;
+  border: 2px solid #fae47e;
 }
 #product .tab_pro > li:nth-child(1) > a {
   width: 120px;
@@ -525,7 +651,7 @@ a {
   z-index: -1;
 }
 #product .tab_pro > li .tab_cont .swiper-slide a p {
-  font: 300 16px/1.3 "Noto Sans KR";
+  font: 400 16px/1.3 "Noto Sans KR";
   color: #666;
   letter-spacing: -0.8px;
   word-break: keep-all;
@@ -603,22 +729,22 @@ a {
 #product .tab_pro > li .tab_cont .swiper-button-next {
   top: 40%;
   right: -30px;
-  color: #f52334;
+  color: #CE403D;
 }
 #product .tab_pro > li .tab_cont .swiper-button-prev {
   top: 40%;
   left: -30px;
-  color: #f52334;
+  color: #CE403D;
 }
 #product .tab_pro > li.on > a {
   background: #fae47e;
-  border: 2px solid #ee7868;
+  border: 2px solid #3c2121;
 }
 #product .tab_pro > li.on .tab_cont {
   display: block;
 }
 #product .btn_pro {
-  padding-bottom: 130px;
+  padding-bottom: 100px;
   text-align: center;
 }
 #product .btn_pro ul {
@@ -633,9 +759,9 @@ a {
   width: 287px;
   height: 60px;
   border-radius: 36px;
-  border: solid 3px #f52334;
+  border: solid 3px #CE403D;
   font-family: "Nunito Sans";
-  color: #f52334;
+  color: #CE403D;
   font-size: 18px;
   font-weight: 700;
   line-height: 3;
@@ -648,9 +774,9 @@ a {
   display: inline-block;
   width: 287px;
   height: 60px;
-  background: #f52334;
+  background: #CE403D;
   border-radius: 36px;
-  border: solid 3px #f52334;
+  border: solid 3px #CE403D;
   font-family: "Nunito Sans";
   color: #fff;
   font-size: 18px;
@@ -667,7 +793,7 @@ a {
 #event .row {
   position: relative;
   width: 1420px;
-  padding: 130px 0;
+  padding: 130px 0 100px;
   text-align: center;
   margin: 0 auto;
 }
@@ -676,7 +802,7 @@ a {
   display: inline-block;
   font-family: "Montserrat";
   font-size: 50px;
-  color: #f52334;
+  color: #CE403D;
   font-weight: 900;
   letter-spacing: -0.5px;
   margin-bottom: 40px;
@@ -686,13 +812,10 @@ a {
   position: absolute;
   width: 100%;
   height: 4px;
-  background: #f52334;
+  background: #CE403D;
   bottom: -5px;
   left: 0;
   transition: 0.5s;
-}
-#event .swiper {
-  margin-top: 50px;
 }
 #event .swiper-slide {
   padding-bottom: 150px;
@@ -712,7 +835,7 @@ a {
   height: 13px;
   background: #ee7868;
   z-index: 1;
-  transition: 0.75s;
+  transition: 0.35s;
 }
 #event .swiper-slide > a::after {
   content: "";
@@ -723,13 +846,13 @@ a {
   height: 13px;
   background: #ee7868;
   z-index: 1;
-  transition: 0.75s;
+  transition: 0.35s;
 }
 #event .swiper-slide > a img {
   position: relative;
   display: block;
   width: 100%;
-  transition: 0.35s;
+  transition: 0.25s;
   transform: scale(0.85);
 }
 #event .swiper-slide > a img::after {
@@ -752,7 +875,7 @@ a {
   height: 0;
   background: #ee7868;
   z-index: 1;
-  transition: 0.75s;
+  transition: 0.35s;
 }
 #event .swiper-slide > a figure::after {
   content: "";
@@ -763,7 +886,7 @@ a {
   height: 0;
   background: #ee7868;
   z-index: 1;
-  transition: 0.75s;
+  transition: 0.35s;
 }
 #event .swiper-slide > a figure figcaption {
   position: absolute;
@@ -786,11 +909,11 @@ a {
   content: "";
   position: absolute;
   left: 30px;
-  bottom: -20px;
+  bottom: -10px;
   width: 30px;
   height: 14px;
   background: url(../img/main/arrow_cont.png) no-repeat;
-  transition: 0.35s 0.35s;
+  transition: 0.35s 0.25s;
 }
 #event .swiper-slide > a:hover::before {
   width: 100%;
@@ -813,27 +936,57 @@ a {
 }
 #event .swiper-slide > a:hover figure figcaption {
   bottom: -140px;
-  opacity: 1;
+  opacity: 3;
 }
 #event .swiper-slide > a:hover figure figcaption p::after {
   bottom: 30px;
 }
 #event .swiper-button-next {
-  top: 50%;
+  top: 52%;
   right: -30px;
-  color: #f52334;
+  color: #CE403D;
 }
 #event .swiper-button-prev {
-  top: 50%;
+  top: 52%;
   left: -30px;
-  color: #f52334;
+  color: #CE403D;
+}
+
+#banner {
+  background: url(../img/main/banner.png) no-repeat center/cover fixed;
+}
+#banner .inner {
+  padding: 130px 0;
+  text-align: center;
+}
+#banner .inner h3 {
+  font: 900 50px/1.3 "Montserrat";
+  color: #CE403D;
+}
+#banner .inner p {
+  font: 700 26px/1.3 "Montserrat";
+  color: #3c2121;
 }
 
 #news {
-  background: #ffdcd1;
+  position: relative;
+  background: #fff5c9;
+  overflow: hidden;
+}
+#news::before {
+  content: "";
+  display: block;
+  width: 1260px;
+  height: 1260px;
+  position: Absolute;
+  top: -58%;
+  left: -11%;
+  background: #ffefa4;
+  opacity: 0.6;
+  border-radius: 100%;
 }
 #news .inner {
-  padding: 130px 0;
+  padding: 130px 150px 100px;
   text-align: center;
 }
 #news h2 {
@@ -841,7 +994,7 @@ a {
   display: inline-block;
   font-family: "Montserrat";
   font-size: 50px;
-  color: #f52334;
+  color: #CE403D;
   font-weight: 900;
   letter-spacing: -0.5px;
   margin-bottom: 40px;
@@ -851,27 +1004,29 @@ a {
   position: absolute;
   width: 100%;
   height: 4px;
-  background: #f52334;
+  background: #CE403D;
   bottom: -5px;
   left: 0;
   transition: 0.5s;
 }
 #news ul {
-  width: 1000px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 #news ul li {
   display: flex;
-  border-top: 2px solid #000;
+  border-top: 2px solid #3c2121;
   padding: 30px;
   transition: 0.5s;
 }
 #news ul li:nth-child(2) {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #3c2121;
 }
 #news ul li > a {
   display: block;
-  width: 310px;
+  width: 100%;
+  max-width: 310px;
   flex-shrink: 0;
 }
 #news ul li > a img {
@@ -879,21 +1034,21 @@ a {
   width: 100%;
 }
 #news ul li .news_cont {
-  padding-left: 25px;
   width: calc(100% - 310px);
+  padding-left: 25px;
   text-align: left;
   flex-grow: 1;
 }
 #news ul li .news_cont span {
   display: inline-block;
-  background: #402021;
+  background: #3c2121;
   color: #fff;
-  font: 700 15px/1 "Nunito Sans";
+  font: 500 15px/1 "Roboto";
   padding: 8px 22px;
   margin-bottom: 12px;
 }
 #news ul li .news_cont h3 {
-  font: 600 20px/1 "S-CoreDream";
+  font: 600 20px/1.3 "S-CoreDream";
   color: #3c2121;
   letter-spacing: -1px;
   margin-bottom: 20px;
@@ -917,23 +1072,23 @@ a {
   transition: 0.5s;
 }
 #news ul li:hover {
-  background: #ffd1c3;
+  background: rgba(255, 255, 255, 0.3);
 }
 #news ul li:hover .news_cont a {
-  color: #f52334;
-  border-bottom: 1px solid #f52334;
+  color: #CE403D;
+  border-bottom: 1px solid #CE403D;
 }
 #news .btn_news {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 #news .btn_news a {
   position: relative;
   display: inline-block;
   width: 287px;
   height: 60px;
-  background: #f52334;
+  background: #CE403D;
   border-radius: 36px;
-  border: solid 3px #f52334;
+  border: solid 3px #CE403D;
   font-family: "Nunito Sans";
   color: #fff;
   font-size: 18px;
@@ -944,111 +1099,8 @@ a {
   overflow: hidden;
 }
 
-#video {
-  position: relative;
-  background: #fff5c6;
-  overflow: hidden;
-}
-#video::before {
-  content: "";
-  display: block;
-  width: 1260px;
-  height: 1260px;
-  position: Absolute;
-  top: -58%;
-  left: -11%;
-  background: #ffefa4;
-  opacity: 0.6;
-  border-radius: 100%;
-}
-#video .inner {
-  padding: 130px 0;
-  text-align: center;
-}
-#video h2 {
-  position: relative;
-  display: inline-block;
-  font-family: "Montserrat";
-  font-size: 50px;
-  color: #f52334;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  margin-bottom: 40px;
-}
-#video h2:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background: #f52334;
-  bottom: -5px;
-  left: 0;
-  transition: 0.5s;
-}
-#video .vid_wrap {
-  width: 1400px;
-  margin: 30px auto;
-  display: flex;
-}
-#video .vid_wrap .vid_left {
-  position: relative;
-  height: 566px;
-  flex-shrink: 0;
-  flex-basis: 60%;
-}
-#video .vid_wrap .vid_left article {
-  display: none;
-  width: 100%;
-  height: 100%;
-}
-#video .vid_wrap .vid_left article > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#video .vid_wrap .vid_left article > a > iframe {
-  width: 100%;
-  height: 100%;
-}
-#video .vid_wrap .vid_left article > a > .btn_play {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 133px;
-  height: 132px;
-  background: url(../img/main/btn_play.png) no-repeat;
-  border: 0;
-  cursor: pointer;
-  z-index: 2;
-}
-#video .vid_wrap .vid_left article > a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-#video .vid_wrap .vid_left article.on {
-  display: block;
-}
-#video .vid_wrap .vid_left article.vid_1 > a::after {
-  background: url(../img/main/video_img_1.jpg) no-repeat center/cover;
-}
-#video .vid_wrap .vid_left article.vid_2 > a::after {
-  background: url(../img/main/video_img_2.jpg) no-repeat center/cover;
-}
-#video .vid_wrap .vid_right .tit_video .txt {
-  font: 700 25px/1 "S-CoreDream";
-  color: #3C2121;
-  border: 3px solid #3C2121;
-  border-radius: 3px;
-  text-align: center;
-}
 /* 미디어쿼리 */
-@media screen and (max-width: 1659px) {
+@media screen and (max-width: 1599px) {
   #product .row {
     width: 1000px;
   }
@@ -1059,36 +1111,19 @@ a {
     width: 1050px;
   }
 }
-@media screen and (max-width: 1499px) {
-  #visual .swiper1 .swiper-pagination {
-    bottom: 5%;
-    left: 50%;
-    top: unset;
-    transform: translateX(-50%);
-    width: 100%;
-    margin-bottom: 0;
-  }
-  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet {
-    display: inline-block;
-    width: auto;
-  }
-  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet:first-child {
-    margin-right: 40px;
-  }
-  #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span.icon {
-    margin: 0 5px;
-  }
-}
 @media screen and (max-width: 1199px) {
+  #visual .swiper1 .swiper-slide img {
+    height: calc(90vh - 80px);
+  }
   #visual .swiper1 .swiper-pagination {
-    bottom: 5%;
+    bottom: 20px;
   }
   #visual .swiper1 .swiper-pagination .swiper-pagination-bullet:first-child {
-    margin-right: 15px;
+    margin-right: 10px;
   }
   #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span.icon {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
   #visual .swiper1 .swiper-pagination .swiper-pagination-bullet span:nth-child(3) {
     display: none;
@@ -1128,9 +1163,9 @@ a {
     width: 220px;
     height: 52px;
     border-radius: 36px;
-    border: solid 3px #f52334;
+    border: solid 3px #CE403D;
     font-family: "Nunito Sans";
-    color: #f52334;
+    color: #CE403D;
     font-size: 16px;
     font-weight: 700;
     line-height: 3;
@@ -1143,9 +1178,9 @@ a {
     display: inline-block;
     width: 220px;
     height: 52px;
-    background: #f52334;
+    background: #CE403D;
     border-radius: 36px;
-    border: solid 3px #f52334;
+    border: solid 3px #CE403D;
     font-family: "Nunito Sans";
     color: #fff;
     font-size: 16px;
@@ -1194,10 +1229,39 @@ a {
   #event .swiper-button-prev {
     top: 55%;
   }
+  #banner .inner h3 {
+    font: 900 45px/1.3 "Montserrat";
+  }
+  #banner .inner p {
+    font: 700 20px/1.3 "Montserrat";
+  }
+  #news .inner {
+    padding: 130px 100px 100px;
+  }
+  #news .btn_news a {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 52px;
+    background: #CE403D;
+    border-radius: 36px;
+    border: solid 3px #CE403D;
+    font-family: "Nunito Sans";
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 3;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+  }
 }
 @media screen and (max-width: 899px) {
+  #visual .swiper1 .swiper-slide img {
+    height: calc(70vh - 80px);
+  }
   #visual .swiper1 .swiper-pagination {
-    bottom: 2%;
+    bottom: 10px;
   }
   #visual .swiper1 .swiper-pagination .swiper-pagination-bullet:first-child {
     margin-right: 0;
@@ -1224,13 +1288,14 @@ a {
   #product .row {
     width: 100%;
     max-width: 350px;
+    padding: 80px 0 50px;
   }
   #product h2 {
     position: relative;
     display: inline-block;
     font-family: "Montserrat";
     font-size: 40px;
-    color: #f52334;
+    color: #CE403D;
     font-weight: 900;
     letter-spacing: -0.5px;
     margin-bottom: 30px;
@@ -1258,16 +1323,20 @@ a {
   #product .tab_pro > li .tab_cont {
     margin-top: 70px;
   }
+  #product .btn_pro {
+    padding-bottom: 80px;
+  }
   #event .row {
     width: 100%;
     max-width: 350px;
+    padding: 80px 0;
   }
   #event h2 {
     position: relative;
     display: inline-block;
     font-family: "Montserrat";
     font-size: 40px;
-    color: #f52334;
+    color: #CE403D;
     font-weight: 900;
     letter-spacing: -0.5px;
     margin-bottom: 30px;
@@ -1275,20 +1344,62 @@ a {
   #event .swiper-slide > a {
     width: 330px;
   }
+  #banner .inner {
+    padding: 100px;
+  }
+  #banner .inner h3 {
+    font: 900 40px/1 "Montserrat";
+    margin-bottom: 10px;
+  }
+  #banner .inner p {
+    font: 700 18px/1.3 "Montserrat";
+  }
+  #news .inner {
+    padding: 80px;
+  }
   #news h2 {
     position: relative;
     display: inline-block;
     font-family: "Montserrat";
     font-size: 40px;
-    color: #f52334;
+    color: #CE403D;
     font-weight: 900;
     letter-spacing: -0.5px;
     margin-bottom: 30px;
+  }
+  #news ul li {
+    display: block;
+  }
+  #news ul li .news_cont {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  #news ul li .news_cont h3 {
+    font: 600 18px/1.3 "S-CoreDream";
+    margin-bottom: 10px;
+  }
+  #news ul li .news_cont span {
+    display: none;
+  }
+  #news ul li .news_cont p {
+    font: 300 15px/1.4 "Noto Sans KR";
+    -webkit-line-clamp: 3;
+    margin-bottom: 20px;
+  }
+  #news .btn_news {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 750px) {
+  #visual .swiper1 .swiper-slide img {
+    height: 100%;
   }
 }
 @media screen and (max-width: 600px) {
   #product .row {
     max-width: 280px;
+    padding: 80px 0 20px;
   }
   #product .tab_pro > li > a {
     top: -60px;
@@ -1328,9 +1439,9 @@ a {
     width: 160px;
     height: 48px;
     border-radius: 36px;
-    border: solid 3px #f52334;
+    border: solid 3px #CE403D;
     font-family: "Nunito Sans";
-    color: #f52334;
+    color: #CE403D;
     font-size: 14px;
     font-weight: 700;
     line-height: 3;
@@ -1343,9 +1454,9 @@ a {
     display: inline-block;
     width: 160px;
     height: 48px;
-    background: #f52334;
+    background: #CE403D;
     border-radius: 36px;
-    border: solid 3px #f52334;
+    border: solid 3px #CE403D;
     font-family: "Nunito Sans";
     color: #fff;
     font-size: 14px;
@@ -1361,6 +1472,36 @@ a {
   }
   #event .swiper-slide > a {
     width: 300px;
+  }
+  #banner .inner {
+    padding: 100px 80px;
+  }
+  #banner .inner h3 {
+    font: 900 35px/1.1 "Montserrat";
+    margin-bottom: 10px;
+  }
+  #banner .inner p {
+    font: 700 14px/1.3 "Montserrat";
+  }
+  #news .inner {
+    padding: 80px 50px;
+  }
+  #news .btn_news a {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 48px;
+    background: #CE403D;
+    border-radius: 36px;
+    border: solid 3px #CE403D;
+    font-family: "Nunito Sans";
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 3;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 450px) {
@@ -1389,9 +1530,9 @@ a {
     width: 130px;
     height: 48px;
     border-radius: 36px;
-    border: solid 3px #f52334;
+    border: solid 3px #CE403D;
     font-family: "Nunito Sans";
-    color: #f52334;
+    color: #CE403D;
     font-size: 14px;
     font-weight: 700;
     line-height: 3;
@@ -1404,9 +1545,9 @@ a {
     display: inline-block;
     width: 130px;
     height: 48px;
-    background: #f52334;
+    background: #CE403D;
     border-radius: 36px;
-    border: solid 3px #f52334;
+    border: solid 3px #CE403D;
     font-family: "Nunito Sans";
     color: #fff;
     font-size: 14px;
@@ -1432,6 +1573,25 @@ a {
   }
   #event .swiper-slide > a:hover figure figcaption {
     bottom: -100px;
+  }
+  #banner .inner {
+    padding: 100px 40px;
+  }
+  #banner .inner h3 {
+    font: 900 30px/1.1 "Montserrat";
+    margin-bottom: 10px;
+  }
+  #banner .inner p {
+    font: 700 14px/1.3 "Montserrat";
+  }
+  #news .inner {
+    padding: 80px 30px;
+  }
+  #news ul li {
+    padding: 20px;
+  }
+  #news ul li .news_cont {
+    margin-top: 20px;
   }
 }
 

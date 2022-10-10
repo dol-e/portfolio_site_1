@@ -117,27 +117,31 @@
   // 유틸리티 메뉴
   .util {
     position: absolute; right: 100px; top: 50%; transform: translateY(-50%);
-    display: flex;
-
-    li {
-      position: relative; margin-right: 20px;
-      &::after {
-        content: ''; position: absolute; right: -10px; top: 50%; transform: translateY(-50%);
-        display: block; width: 2px; height: 14px; background: #401e1e;
-      }
-      &:last-child {
-        margin-right: 0;
+    
+    ul {
+      display: flex;
+      li {
+        position: relative; margin-right: 20px;
         &::after {
-          display: none;
+          content: ''; position: absolute; right: -10px; top: 50%; transform: translateY(-50%);
+          display: block; width: 2px; height: 14px; background: #401e1e;
+        }
+        &:last-child {
+          margin-right: 0;
+          &::after {
+            display: none;
+          }
+        }
+        a {
+          font: 700 15px/1 'Montserrat'; color: #401e1e; transition: .35s;
+          &:hover {
+            color: #CE403D;
+          }      
         }
       }
-      a {
-        font: 700 15px/1 'Montserrat'; color: #401e1e; transition: .35s;
-        &:hover {
-          color: #CE403D;
-        }      
-      }
     }
+
+    
   }
 
   .btn_call {
@@ -272,6 +276,8 @@
 
 
     }
+
+    &.on {display: block;}
   
   }
 

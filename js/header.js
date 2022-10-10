@@ -1,6 +1,8 @@
 
 
-/* 메뉴 - PC버전 */
+
+/* 메뉴 - PC버전 ***************************************/
+
 const wrap = document.querySelector("#wrap");
 const gnb = wrap.querySelector("#gnb");
 const gnb_lis = wrap.querySelectorAll("#gnb > li");
@@ -22,7 +24,6 @@ for(let el of gnb_lis) {
 
 
 //풀다운메뉴
-
 function mouseOverHandler(e){
 
   for(let el of gnb_lis) {
@@ -54,12 +55,25 @@ gnb.addEventListener('mouseleave',mouseLeaveHandler);
 
 
 
-/* 메뉴 - 모바일 버전 */
-const gnb_mo_lis = wrap.querySelectorAll("#gnb_mo > ul > li");
-const gnb_mo_sub = wrap.querySelector("#gnb_mo > ul > li .sub_menu");
+/* 메뉴 - 모바일 버전 ***************************************/
+
+// 모바일 메뉴 열기
+const mobileArea = wrap.querySelector("#header .mobile_area");
+const btnCall = wrap.querySelector("#header .btn_call");
+const btnClose = mobileArea.querySelector(".btn_close");
+
+btnCall.addEventListener("click",()=>{
+  mobileArea.classList.add("on");
+})
+
+btnClose.addEventListener("click",()=>{
+  mobileArea.classList.remove("on");
+})
 
 
 //서브메뉴가 있으면 li에 클래스 down붙이기
+const gnb_mo_lis = mobileArea.querySelectorAll("#gnb_mo > ul > li");
+
 for(let el of gnb_mo_lis) {
   const isSubMenu = el.querySelector(".sub_menu");
   if(isSubMenu) {

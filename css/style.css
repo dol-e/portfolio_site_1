@@ -248,13 +248,15 @@ a {
   right: 100px;
   top: 50%;
   transform: translateY(-50%);
+}
+#header .util ul {
   display: flex;
 }
-#header .util li {
+#header .util ul li {
   position: relative;
   margin-right: 20px;
 }
-#header .util li::after {
+#header .util ul li::after {
   content: "";
   position: absolute;
   right: -10px;
@@ -265,18 +267,18 @@ a {
   height: 14px;
   background: #401e1e;
 }
-#header .util li:last-child {
+#header .util ul li:last-child {
   margin-right: 0;
 }
-#header .util li:last-child::after {
+#header .util ul li:last-child::after {
   display: none;
 }
-#header .util li a {
+#header .util ul li a {
   font: 700 15px/1 "Montserrat";
   color: #401e1e;
   transition: 0.35s;
 }
-#header .util li a:hover {
+#header .util ul li a:hover {
   color: #CE403D;
 }
 #header .btn_call {
@@ -459,6 +461,9 @@ a {
   width: 30px;
   height: 30px;
   background: url(../img/layout/ham_close.png) no-repeat center/100%;
+}
+#header .mobile_area.on {
+  display: block;
 }
 
 /* 푸터 */
@@ -1845,6 +1850,103 @@ a {
   #news ul li .news_cont {
     margin-top: 20px;
   }
+}
+#content {
+  width: 100%;
+  margin-top: 80px;
+  padding: 0 0 150px;
+}
+#content .sub_visual {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 100px;
+  background: #eee;
+}
+#content .sub_visual .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px;
+}
+#content .sub_visual .inner h2.sub_tit {
+  position: relative;
+  font: 600 50px/1 "S-CoreDream";
+  color: #3c2121;
+  padding-left: 45px;
+}
+#content .sub_visual .inner h2.sub_tit::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35px;
+  height: 100%;
+  background: url(../img/sub/sub_arrow.png) no-repeat center/100%;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1599px) {
+  #content .sub_visual .inner {
+    padding: 0 60px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  #content .sub_visual {
+    height: 250px;
+  }
+  #content .sub_visual .inner h2.sub_tit {
+    font: 600 40px/1 "S-CoreDream";
+    padding-left: 30px;
+  }
+  #content .sub_visual .inner h2.sub_tit::before {
+    width: 25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #content .sub_visual {
+    height: 200px;
+  }
+  #content .sub_visual .inner {
+    padding: 0 30px;
+  }
+  #content .sub_visual .inner h2.sub_tit {
+    font: 600 30px/1 "S-CoreDream";
+    padding-left: 25px;
+  }
+  #content .sub_visual .inner h2.sub_tit::before {
+    width: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #content .sub_visual {
+    height: 150px;
+  }
+  #content .sub_visual .inner h2.sub_tit {
+    font: 600 26px/1 "S-CoreDream";
+    padding-left: 18px;
+  }
+  #content .sub_visual .inner h2.sub_tit::before {
+    width: 15px;
+  }
+}
+#content.history .sub_visual {
+  background: #eee url(../img/sub/sub_visual_1.png) no-repeat center top/cover;
+}
+
+#content.location .sub_visual {
+  background: #eee url(../img/sub/sub_visual_2.png) no-repeat center top/cover;
+}
+
+#content.news .sub_visual {
+  background: #eee url(../img/sub/sub_visual_3.png) no-repeat center top/cover;
+}
+
+#content.gallery .sub_visual {
+  background: #eee url(../img/sub/sub_visual_4.png) no-repeat center top/cover;
+}
+
+#content.youtube .sub_visual {
+  background: #eee url(../img/sub/sub_visual_5.png) no-repeat center top/cover;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,121 @@
+
+#content{
+  width: 100%; margin-top: 80px; padding: 0 0 150px;
+
+  .sub_visual{
+    width: 100%; height: 300px; margin-bottom: 100px;
+    background: #eee;
+
+    .inner {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 0 80px;
+
+      h2.sub_tit {
+        position: relative;
+        font: 600 50px/1 "S-CoreDream"; color: #3c2121;
+        padding-left: 45px;
+  
+        &::before {
+          content: ''; position: absolute; left: 0; top: 0;
+          width: 35px; height: 100%; background: url(../img/sub/sub_arrow.png) no-repeat center/100%;
+        }      
+      }
+    }
+
+  }
+
+}
+
+
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1599px) {
+
+  #content {
+    .sub_visual {
+      .inner {
+        padding: 0 60px;
+      }
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: 1199px) {
+
+  #content {
+    .sub_visual {
+      height: 250px;
+
+      .inner {
+        h2.sub_tit {
+          font: 600 40px/1 "S-CoreDream"; 
+          padding-left: 30px;
+          &::before {
+            width: 25px;
+          }  
+        }
+      }
+
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: 899px) {
+
+  
+}
+
+
+@media screen and (max-width: 600px) {
+
+  #content {
+    .sub_visual {
+      height: 200px;
+
+      .inner {
+        padding: 0 30px;
+
+        h2.sub_tit {
+          font: 600 30px/1 "S-CoreDream"; 
+          padding-left: 25px;
+          &::before {
+            width: 20px;
+          }  
+        }
+      }
+
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+  #content {
+    .sub_visual {
+      height: 150px;
+
+      .inner {
+        h2.sub_tit {
+          font: 600 26px/1 "S-CoreDream"; 
+          padding-left: 18px;
+          &::before {
+            width: 15px;
+          }  
+        }
+      }
+
+    }
+  }
+
+
+}
+

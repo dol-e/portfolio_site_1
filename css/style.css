@@ -164,12 +164,26 @@ a {
   margin-left: 270px;
 }
 #header .menu_web #gnb > li {
-  padding: 30px 15px 0;
+  padding: 30px 12px 0;
+}
+#header .menu_web #gnb > li.down::after {
+  content: "\f078";
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "fontAwesome";
+  font-size: 16px;
+  color: #CE403D;
+  margin-left: 2px;
+  margin-bottom: 5px;
 }
 #header .menu_web #gnb > li > a {
   font: 500 17px/1 "S-CoreDream";
   letter-spacing: -0.5px;
   color: #401e20;
+  transition: 0.25s;
+}
+#header .menu_web #gnb > li > a:hover {
+  color: #CE403D;
 }
 #header .menu_web #gnb > li .sub_menu {
   display: none;
@@ -211,11 +225,11 @@ a {
   letter-spacing: -0.5px;
   color: #333;
   cursor: pointer;
-  transition: 0.25s;
+  transition: 0.35s;
 }
 #header .menu_web #gnb > li .sub_menu ul li a:hover {
   font: 500 20px/1 "S-CoreDream";
-  color: #f52334;
+  color: #CE403D;
 }
 #header .menu_web #gnb > li .sub_menu img {
   position: absolute;
@@ -260,6 +274,10 @@ a {
 #header .util li a {
   font: 700 15px/1 "Montserrat";
   color: #401e1e;
+  transition: 0.35s;
+}
+#header .util li a:hover {
+  color: #CE403D;
 }
 #header .btn_call {
   position: absolute;
@@ -269,10 +287,178 @@ a {
   display: block;
   width: 40px;
   height: 24px;
-  background: url(../img/layout/icon_ham.png);
+  background: url(../img/layout/icon_ham.png) no-repeat center/100%;
 }
-#header .menu_mo {
+#header .mobile_area {
   display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+#header .mobile_area .menu_mo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 600px;
+  height: 100%;
+  background: #fff;
+}
+#header .mobile_area .menu_mo .menu_top {
+  padding: 40px;
+}
+#header .mobile_area .menu_mo .menu_top h2 {
+  text-align: center;
+}
+#header .mobile_area .menu_mo .menu_top h2 a {
+  display: inline-block;
+  width: 160px;
+}
+#header .mobile_area .menu_mo .menu_top h2 a img {
+  width: 100%;
+}
+#header .mobile_area .menu_mo .menu_top .util_mo {
+  margin-top: 30px;
+}
+#header .mobile_area .menu_mo .menu_top .util_mo ul {
+  display: flex;
+  justify-content: space-between;
+}
+#header .mobile_area .menu_mo .menu_top .util_mo ul li {
+  width: 49%;
+}
+#header .mobile_area .menu_mo .menu_top .util_mo ul li:nth-child(1) a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 48px;
+  border-radius: 36px;
+  border: solid 3px #CE403D;
+  font-family: "Nunito Sans";
+  color: #CE403D;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 3;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 1;
+  overflow: hidden;
+}
+#header .mobile_area .menu_mo .menu_top .util_mo ul li:nth-child(2) a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 48px;
+  background: #CE403D;
+  border-radius: 36px;
+  border: solid 3px #CE403D;
+  font-family: "Nunito Sans";
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 3;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+#header .mobile_area .menu_mo #gnb_mo {
+  background: #fff5d9;
+  height: 100%;
+  padding: 45px 30px;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li {
+  margin-bottom: 15px;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li > a {
+  position: relative;
+  display: block;
+  background: #ffe6a0;
+  font: 500 23px/1 "S-CoreDream";
+  color: #3c2121;
+  text-align: center;
+  padding: 14px;
+  transition: 0.1s;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li.down > a::after {
+  content: "\f078";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "fontAwesome";
+  font-size: 18px;
+  color: #CE403D;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu {
+  display: none;
+  position: relative;
+  width: 97%;
+  padding: 35px 35px 28px;
+  margin: 15px 0 30px;
+  z-index: 1;
+  transition: 0.35s;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  width: 100%;
+  height: 100%;
+  background: #ee7868;
+  border: 3px solid #3C2121;
+  z-index: -1;
+  transition: 0.35s;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 3px solid #3C2121;
+  z-index: -1;
+  transition: 0.35s;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu ul li {
+  margin-bottom: 15px;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu ul li a {
+  display: inline-block;
+  font: 300 20px/1.3 "S-CoreDream";
+  color: #3c2121;
+  border-bottom: 1px solid transparent;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu ul li:last-child {
+  margin-bottom: 0;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu ul li:hover a {
+  color: #f52334;
+  border-bottom: 1px solid #f52334;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li.on > a {
+  background: #3c2121;
+  color: #fff;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li.on .sub_menu {
+  display: block;
+}
+#header .mobile_area .menu_mo #gnb_mo > ul > li.on.down > a::after {
+  content: "\f077";
+  color: #ffe6a0;
+}
+#header .mobile_area .menu_mo .btn_close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/layout/ham_close.png) no-repeat center/100%;
 }
 
 /* 푸터 */
@@ -291,11 +477,11 @@ a {
 #footer .foot_box_1 .foot_menu ul li {
   position: relative;
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 18px;
 }
 #footer .foot_box_1 .foot_menu ul li a {
   display: block;
-  font: 300 18px/1.5 "S-CoreDream";
+  font: 300 17px/1.5 "S-CoreDream";
   letter-spacing: -0.5px;
   color: rgba(255, 255, 255, 0.7);
   transition: 0.35s;
@@ -307,7 +493,7 @@ a {
 #footer .foot_box_1 .foot_menu ul li::after {
   content: "";
   position: absolute;
-  right: 0;
+  right: -2px;
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
@@ -436,12 +622,74 @@ a {
   }
 }
 @media screen and (max-width: 600px) {
+  /* 헤더 */
+  #header .mobile_area .menu_mo {
+    width: 100%;
+    max-width: 600px;
+  }
+  #header .mobile_area .menu_mo .menu_top {
+    padding: 30px;
+  }
+  /* 푸터 */
   #footer .foot_box_1 .foot_menu ul li {
     display: inline-block;
     padding: 0 10px;
   }
   #footer .foot_box_1 .foot_menu ul li a {
     font: 300 15px/1.5 "S-CoreDream";
+  }
+}
+@media screen and (max-width: 450px) {
+  /* 헤더 */
+  #header h1.logo {
+    left: 20px;
+  }
+  #header h1.logo img {
+    width: 115px;
+  }
+  #header .util {
+    display: none;
+  }
+  #header .btn_call {
+    right: 20px;
+    width: 32px;
+  }
+  #header .mobile_area .menu_mo .menu_top h2 a {
+    width: 130px;
+  }
+  #header .mobile_area .menu_mo .menu_top .util_mo ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  #header .mobile_area .menu_mo .menu_top .util_mo ul li {
+    width: 100%;
+    max-width: 200px;
+  }
+  #header .mobile_area .menu_mo .menu_top .util_mo ul li:nth-child(1) {
+    margin-bottom: 10px;
+  }
+  #header .mobile_area .menu_mo #gnb_mo {
+    padding: 35px 30px;
+  }
+  #header .mobile_area .menu_mo #gnb_mo > ul > li > a {
+    font: 500 18px/1 "S-CoreDream";
+  }
+  #header .mobile_area .menu_mo #gnb_mo > ul > li.down > a::after {
+    right: 10px;
+    font-size: 14px;
+  }
+  #header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu {
+    padding: 25px 25px 18px;
+  }
+  #header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu ul li {
+    margin-bottom: 10px;
+  }
+  #header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu ul li a {
+    font: 300 16px/1.3 "S-CoreDream";
+  }
+  #header .mobile_area .menu_mo .btn_close {
+    width: 25px;
+    height: 25px;
   }
 }
 #visual {
@@ -765,6 +1013,7 @@ a {
   font-size: 18px;
   font-weight: 700;
   line-height: 3;
+  text-align: center;
   vertical-align: middle;
   z-index: 1;
   overflow: hidden;
@@ -1169,6 +1418,7 @@ a {
     font-size: 16px;
     font-weight: 700;
     line-height: 3;
+    text-align: center;
     vertical-align: middle;
     z-index: 1;
     overflow: hidden;
@@ -1445,6 +1695,7 @@ a {
     font-size: 14px;
     font-weight: 700;
     line-height: 3;
+    text-align: center;
     vertical-align: middle;
     z-index: 1;
     overflow: hidden;
@@ -1536,6 +1787,7 @@ a {
     font-size: 14px;
     font-weight: 700;
     line-height: 3;
+    text-align: center;
     vertical-align: middle;
     z-index: 1;
     overflow: hidden;

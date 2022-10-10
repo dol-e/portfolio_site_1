@@ -9,6 +9,8 @@
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
   <!-- css -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <script src="https://kit.fontawesome.com/53bbf4e99c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
 
@@ -80,57 +82,73 @@
           </li>
         </ul>
 
-        <!-- 메뉴 열기 -->
-        <a href="#" class="btn_call" title="메뉴 열기">
+        <!-- 모바일 메뉴 열기 -->
+        <a href="#" class="btn_call" title="메뉴 열기 ">
           <span class="hidden">메뉴 열기</span>
         </a>
 
         <!-- 모바일 메뉴 영역 -->
-        <nav class="menu_mo">
-          <h2>
-            <a href="index.html">
-              <img src="img/layout/logo.png" alt="홍루이젠">
-            </a>
-          </h2>
-
-          <!-- 모바일 유틸리티 메뉴 -->
-          <ul class="util_mo">
-            <li>
-              <a href="#" title="로그인">LOGIN</a>
-            </li>
-            <li>
-              <a href="#" title="회원가입">JOIN</a>
-            </li>
-          </ul>
-
-          <!-- 모바일 주메뉴 -->
-          <ul id="gnb_mo">
-            <li>
-              <a href="#">브랜드 소개</a>
-              <div class="sub_menu">
-                <h3>브랜드 소개</h3>
+        <div class="mobile_area">
+          <h2 class="hidden">모바일 메뉴 영역</h2>
+          <aside class="menu_mo">
+            <div class="menu_top">
+              <h2>
+                <a href="index.html">
+                  <img src="img/layout/logo.png" alt="홍루이젠">
+                </a>
+              </h2>
+    
+              <!-- 모바일 유틸리티 메뉴 -->
+              <div class="util_mo">
+                <h3 class="hidden">모바일 유틸리티 메뉴</h3>
                 <ul>
                   <li>
-                    <a href="#">히스토리</a>
+                    <a href="#" title="회원가입">Join us</a>
                   </li>
                   <li>
-                    <a href="#">찾아오기</a>
+                    <a href="#" title="로그인">Login</a>
                   </li>
                 </ul>
               </div>
-            </li>
-            <li>
-              <a href="#">공지사항</a>
-            </li>
-            <li>
-              <a href="#">갤러리</a>
-            </li>
-            <li>
-              <a href="#">유튜브</a>
-            </li>
-          </ul>
+            </div>
+  
+            <!-- 모바일 주메뉴 -->
+            <div id="gnb_mo">
+              <h3 class="hidden">모바일 주메뉴</h3>
+              <ul>
+                <li>
+                  <a href="#">브랜드 소개</a>
+                  <div class="sub_menu">
+                    <ul>
+                      <li>
+                        <a href="#">히스토리</a>
+                      </li>
+                      <li>
+                        <a href="#">찾아오기</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">공지사항</a>
+                </li>
+                <li>
+                  <a href="#">갤러리</a>
+                </li>
+                <li>
+                  <a href="#">유튜브</a>
+                </li>
+              </ul>
+            </div>
 
-        </nav>
+            <!-- 모바일 메뉴 닫기 -->
+            <a href="#" class="btn_close" title="메뉴 닫기 ">
+              <span class="hidden">메뉴 닫기</span>
+            </a>
+  
+          </aside>
+        </div>
+
 
       </div>
     </header>

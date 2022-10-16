@@ -21,7 +21,7 @@
   transition: .5s;
 }
 
-@mixin btn_white($width: 287px, $height: 60px, $fontSize: 18px) {
+@mixin btn_white($width: 287px, $height: 60px, $fontSize: 18px, $fontWeight: 700, $lineHeight: 3) {
   position: relative;
   display: inline-block;
   width: $width; height: $height;
@@ -30,15 +30,15 @@
   font-family: 'Nunito Sans';
   color: #CE403D;
   font-size: $fontSize;
-  font-weight: 700;
-  line-height: 3;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
   text-align: center;
   vertical-align: middle;
   z-index: 1;
   overflow: hidden;
 }
 
-@mixin btn_red($width: 287px, $height: 60px, $fontSize: 18px) {
+@mixin btn_red($width: 287px, $height: 60px, $fontSize: 18px, $fontWeight: 700, $lineHeight: 3) {
   position: relative;
   display: inline-block;
   width: $width; height: $height;
@@ -48,8 +48,8 @@
   font-family: 'Nunito Sans';
   color: #fff;
   font-size: $fontSize;
-  font-weight: 700;
-  line-height: 3;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
   text-align: center;
   z-index: 1;
   overflow: hidden;

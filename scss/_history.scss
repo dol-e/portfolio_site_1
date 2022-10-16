@@ -3,4 +3,105 @@
   .sub_visual{
     background: #eee url(../img/sub/sub_visual_1.png) no-repeat center top/cover;
   }
+
+  .container {
+    .box {
+      position: relative; width: 100%; max-width: 1000px; margin: 0 auto;
+
+      &::after {
+        content: ""; position: absolute; left: 50%; top: 30px; 
+        width: 2px; height: calc(100% - 30px); background: #ffd1c3;
+      }
+
+      dl {
+        position: relative; width: 50%; box-sizing: border-box;
+        padding-top: 20px; padding-bottom: 20px;
+        &::after {
+          content:""; position: absolute; top: 25px;
+          width: 20px; height: 20px; background: url(../img/sub/icon.png) no-repeat center/100%; border-radius: 50%;
+          z-index: 1;
+        }
+        dt {
+          font-family: "S-CoreDream"; font-size: 24px; font-weight: 500; color: #333; 
+          margin-bottom: 5px;
+        }
+        dd {
+          font-family: "Noto Sans KR"; font-size: 18px; font-weight: 400; color: #999;
+        }
+      }
+      dl:nth-child(odd) {
+        margin-right: 50%; padding-right: 30px; text-align: right;
+        &::after {
+          right: -11px;
+        }
+      }
+      dl:nth-child(even) {
+        margin-left: 50%; padding-left: 30px; text-align: left;
+        &::after {
+          left: -9px;
+        }
+      }
+    }
+
+    
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 899px) {
+  #content.history {
+    .container {
+      .box {
+        &::after {
+          left: 0;
+        }
+        dl {
+          width: 100%;
+          &::after {
+
+          }
+        }
+        dl:nth-child(odd) {
+          margin-right: 0; padding-right: 0; padding-left: 30px; text-align: left;
+          &::after {
+            right: unset; left: -10px;
+          }
+        }
+        dl:nth-child(even) {
+          margin-left: 0;
+          &::after {
+            left: -10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  #content.history {
+    .container {
+      .box dl {
+        padding-top: 10px; padding-bottom: 10px;
+        dt {font-size: 18px; margin-bottom: 0;}
+        dd {font-size: 14px;}
+
+        &::after {top: 14px; width: 17px; height: 17px;}
+
+        &:nth-child(odd) {
+          padding-left: 20px;
+          &::after {left: -8px;}
+        }
+        &:nth-child(even) {
+          padding-left: 20px;
+          &::after {left: -8px;}
+        }
+      }
+
+    }
+  }
 }

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* 폰트 파일 */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 /* 에스코어드림 라이트 */
@@ -153,7 +153,7 @@ a {
 }
 #header h1.logo img {
   display: block;
-  width: 180px;
+  width: 166px;
 }
 #header .menu_web {
   height: inherit;
@@ -177,7 +177,7 @@ a {
   margin-bottom: 5px;
 }
 #header .menu_web #gnb > li > a {
-  font: 500 17px/1 "S-CoreDream";
+  font: 700 17px/1 "Nunito Sans";
   letter-spacing: -0.5px;
   color: #401e20;
   transition: 0.25s;
@@ -199,9 +199,9 @@ a {
 #header .menu_web #gnb > li .sub_menu h3 {
   display: inline-block;
   vertical-align: top;
-  font: 500 25px/1 "S-CoreDream";
+  font: 700 25px/1 "Nunito Sans";
   letter-spacing: -0.5px;
-  color: #000;
+  color: #401e20;
   margin-right: 25px;
 }
 #header .menu_web #gnb > li .sub_menu h3::after {
@@ -220,15 +220,15 @@ a {
   margin-bottom: 15px;
 }
 #header .menu_web #gnb > li .sub_menu ul li a {
-  display: block;
-  font: 300 20px/1 "S-CoreDream";
-  letter-spacing: -0.5px;
+  display: inline-block;
+  font: 500 20px/1 "Montserrat";
+  letter-spacing: 0;
   color: #333;
   cursor: pointer;
   transition: 0.35s;
 }
 #header .menu_web #gnb > li .sub_menu ul li a:hover {
-  font: 500 20px/1 "S-CoreDream";
+  font: 500 20px/1 "Montserrat";
   color: #CE403D;
 }
 #header .menu_web #gnb > li .sub_menu img {
@@ -340,9 +340,9 @@ a {
   border: solid 3px #CE403D;
   font-family: "Nunito Sans";
   color: #CE403D;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 3;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2.5;
   text-align: center;
   vertical-align: middle;
   z-index: 1;
@@ -358,9 +358,9 @@ a {
   border: solid 3px #CE403D;
   font-family: "Nunito Sans";
   color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 3;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2.5;
   text-align: center;
   z-index: 1;
   overflow: hidden;
@@ -377,7 +377,7 @@ a {
   position: relative;
   display: block;
   background: #ffe6a0;
-  font: 500 23px/1 "S-CoreDream";
+  font: 500 22px/1 "Montserrat";
   color: #3c2121;
   text-align: center;
   padding: 14px;
@@ -431,7 +431,7 @@ a {
 }
 #header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu ul li a {
   display: inline-block;
-  font: 300 20px/1.3 "S-CoreDream";
+  font: 500 20px/1.3 "Montserrat";
   color: #3c2121;
   border-bottom: 1px solid transparent;
 }
@@ -486,7 +486,7 @@ a {
 }
 #footer .foot_box_1 .foot_menu ul li a {
   display: block;
-  font: 300 17px/1.5 "S-CoreDream";
+  font: 400 17px/1.5 "Nunito Sans";
   letter-spacing: -0.5px;
   color: rgba(255, 255, 255, 0.7);
   transition: 0.35s;
@@ -577,16 +577,16 @@ a {
     height: 200px;
   }
   #header .menu_web #gnb > li .sub_menu h3 {
-    font: 500 22px/1 "S-CoreDream";
+    font: 700 22px/1 "Nunito Sans";
   }
   #header .menu_web #gnb > li .sub_menu ul li {
     margin-bottom: 12px;
   }
   #header .menu_web #gnb > li .sub_menu ul li a {
-    font: 300 18px/1 "S-CoreDream";
+    font: 500 18px/1 "Montserrat";
   }
   #header .menu_web #gnb > li .sub_menu ul li a:hover {
-    font: 500 18px/1 "S-CoreDream";
+    font: 500 18px/1 "Montserrat";
   }
 }
 @media screen and (max-width: 1199px) {
@@ -613,17 +613,20 @@ a {
     display: block;
   }
   #footer .foot_box_2 .foot_logo a img {
-    width: 120px;
+    width: 100px;
   }
   #footer .foot_box_2 .sns_menu {
     position: static;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 10px;
+  }
+  #footer .foot_box_2 .sns_menu ul li a img {
+    width: 40px;
   }
   #footer .foot_box_2 .foot_txt {
     display: block;
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -641,7 +644,7 @@ a {
     padding: 0 10px;
   }
   #footer .foot_box_1 .foot_menu ul li a {
-    font: 300 15px/1.5 "S-CoreDream";
+    font: 400 15px/1.5 "Nunito Sans";
   }
 }
 @media screen and (max-width: 450px) {
@@ -677,7 +680,7 @@ a {
     padding: 35px 30px;
   }
   #header .mobile_area .menu_mo #gnb_mo > ul > li > a {
-    font: 500 18px/1 "S-CoreDream";
+    font: 500 18px/1 "Montserrat";
   }
   #header .mobile_area .menu_mo #gnb_mo > ul > li.down > a::after {
     right: 10px;
@@ -690,7 +693,7 @@ a {
     margin-bottom: 10px;
   }
   #header .mobile_area .menu_mo #gnb_mo > ul > li .sub_menu ul li a {
-    font: 300 16px/1.3 "S-CoreDream";
+    font: 500 16px/1.3 "Montserrat";
   }
   #header .mobile_area .menu_mo .btn_close {
     width: 25px;
@@ -1557,7 +1560,7 @@ a {
   }
   #product .tab_pro > li > a {
     top: -70px;
-    font: 500 14px/1 "Nunito Sans";
+    font: 400 14px/1 "Nunito Sans";
   }
   #product .tab_pro > li:nth-child(1) > a {
     width: 80px;
@@ -1658,7 +1661,7 @@ a {
   }
   #product .tab_pro > li > a {
     top: -60px;
-    font: 500 12px/1 "Nunito Sans";
+    font: 400 12px/1 "Nunito Sans";
   }
   #product .tab_pro > li:nth-child(1) > a {
     width: 50px;
@@ -1854,12 +1857,10 @@ a {
 #content {
   width: 100%;
   margin-top: 80px;
-  padding: 0 0 150px;
 }
 #content .sub_visual {
   width: 100%;
   height: 300px;
-  margin-bottom: 100px;
   background: #eee;
 }
 #content .sub_visual .inner {
@@ -1870,7 +1871,10 @@ a {
 }
 #content .sub_visual .inner h2.sub_tit {
   position: relative;
-  font: 600 50px/1 "S-CoreDream";
+  font-family: "Montserrat";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1;
   color: #3c2121;
   padding-left: 45px;
 }
@@ -1879,9 +1883,24 @@ a {
   position: absolute;
   left: 0;
   top: 0;
-  width: 35px;
+  width: 32px;
   height: 100%;
   background: url(../img/sub/sub_arrow.png) no-repeat center/100%;
+}
+#content .container .inner {
+  padding: 100px 120px;
+}
+#content .container .inner h3 {
+  font-family: "S-CoreDream";
+  font-size: 35px;
+  font-weight: 500;
+  color: #3c2121;
+  text-align: center;
+  margin-bottom: 60px;
+}
+#content .container .inner h3 strong {
+  font-weight: 600;
+  color: #CE403D;
 }
 
 /* 미디어쿼리 */
@@ -1889,17 +1908,27 @@ a {
   #content .sub_visual .inner {
     padding: 0 60px;
   }
+  #content .container .inner {
+    padding: 100px;
+  }
 }
 @media screen and (max-width: 1199px) {
   #content .sub_visual {
     height: 250px;
   }
   #content .sub_visual .inner h2.sub_tit {
-    font: 600 40px/1 "S-CoreDream";
+    font-size: 40px;
     padding-left: 30px;
   }
   #content .sub_visual .inner h2.sub_tit::before {
     width: 25px;
+  }
+  #content .container .inner {
+    padding: 80px 90px;
+  }
+  #content .container .inner h3 {
+    font-size: 30px;
+    margin-bottom: 45px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1910,11 +1939,18 @@ a {
     padding: 0 30px;
   }
   #content .sub_visual .inner h2.sub_tit {
-    font: 600 30px/1 "S-CoreDream";
+    font-size: 30px;
     padding-left: 25px;
   }
   #content .sub_visual .inner h2.sub_tit::before {
     width: 20px;
+  }
+  #content .container .inner {
+    padding: 50px;
+  }
+  #content .container .inner h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -1922,17 +1958,135 @@ a {
     height: 150px;
   }
   #content .sub_visual .inner h2.sub_tit {
-    font: 600 26px/1 "S-CoreDream";
-    padding-left: 18px;
+    font-size: 28px;
+    padding-left: 20px;
   }
   #content .sub_visual .inner h2.sub_tit::before {
     width: 15px;
+  }
+  #content .container .inner {
+    padding: 40px 30px;
   }
 }
 #content.history .sub_visual {
   background: #eee url(../img/sub/sub_visual_1.png) no-repeat center top/cover;
 }
+#content.history .container .box {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#content.history .container .box::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  width: 2px;
+  height: calc(100% - 30px);
+  background: #ffd1c3;
+}
+#content.history .container .box dl {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#content.history .container .box dl::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/sub/icon.png) no-repeat center/100%;
+  border-radius: 50%;
+  z-index: 1;
+}
+#content.history .container .box dl dt {
+  font-family: "S-CoreDream";
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+#content.history .container .box dl dd {
+  font-family: "Noto Sans KR";
+  font-size: 18px;
+  font-weight: 400;
+  color: #999;
+}
+#content.history .container .box dl:nth-child(odd) {
+  margin-right: 50%;
+  padding-right: 30px;
+  text-align: right;
+}
+#content.history .container .box dl:nth-child(odd)::after {
+  right: -11px;
+}
+#content.history .container .box dl:nth-child(even) {
+  margin-left: 50%;
+  padding-left: 30px;
+  text-align: left;
+}
+#content.history .container .box dl:nth-child(even)::after {
+  left: -9px;
+}
 
+@media screen and (max-width: 899px) {
+  #content.history .container .box::after {
+    left: 0;
+  }
+  #content.history .container .box dl {
+    width: 100%;
+  }
+  #content.history .container .box dl:nth-child(odd) {
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 30px;
+    text-align: left;
+  }
+  #content.history .container .box dl:nth-child(odd)::after {
+    right: unset;
+    left: -10px;
+  }
+  #content.history .container .box dl:nth-child(even) {
+    margin-left: 0;
+  }
+  #content.history .container .box dl:nth-child(even)::after {
+    left: -10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #content.history .container .box dl {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #content.history .container .box dl dt {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  #content.history .container .box dl dd {
+    font-size: 14px;
+  }
+  #content.history .container .box dl::after {
+    top: 14px;
+    width: 17px;
+    height: 17px;
+  }
+  #content.history .container .box dl:nth-child(odd) {
+    padding-left: 20px;
+  }
+  #content.history .container .box dl:nth-child(odd)::after {
+    left: -8px;
+  }
+  #content.history .container .box dl:nth-child(even) {
+    padding-left: 20px;
+  }
+  #content.history .container .box dl:nth-child(even)::after {
+    left: -8px;
+  }
+}
 #content.location .sub_visual {
   background: #eee url(../img/sub/sub_visual_2.png) no-repeat center top/cover;
 }

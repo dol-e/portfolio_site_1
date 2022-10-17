@@ -489,6 +489,7 @@ a {
   font: 400 17px/1.5 "Nunito Sans";
   letter-spacing: -0.5px;
   color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid transparent;
   transition: 0.35s;
 }
 #footer .foot_box_1 .foot_menu ul li a:hover {
@@ -1889,13 +1890,60 @@ a {
 }
 #content .container .inner {
   padding: 100px 120px;
+  text-align: center;
+}
+#content .container .inner h2.util {
+  position: relative;
+  display: inline-block;
+  transform: rotate(-5deg);
+  padding-right: 80px;
+  margin-bottom: 100px;
+}
+#content .container .inner h2.util::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 50px;
+  height: 35px;
+  background: url(../img/sub/icon_arrow.png) no-repeat center/100%;
+}
+#content .container .inner h2.util span {
+  position: relative;
+  display: block;
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: 700;
+  color: #3C2121;
+  padding: 12px 60px;
+}
+#content .container .inner h2.util span::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #3C2121;
+  background: #ee7868;
+  z-index: -1;
+}
+#content .container .inner h2.util span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #3C2121;
+  background: #fff;
+  z-index: -1;
 }
 #content .container .inner h3 {
   font-family: "S-CoreDream";
   font-size: 35px;
   font-weight: 500;
   color: #3c2121;
-  text-align: center;
   margin-bottom: 60px;
 }
 #content .container .inner h3 strong {
@@ -1931,6 +1979,22 @@ a {
     margin-bottom: 45px;
   }
 }
+@media screen and (max-width: 899px) {
+  #content .container .inner h2.util {
+    padding-right: 70px;
+    margin-bottom: 80px;
+  }
+  #content .container .inner h2.util::after {
+    right: 0;
+    top: 30px;
+    width: 40px;
+    height: 30px;
+  }
+  #content .container .inner h2.util span {
+    font-size: 30px;
+    padding: 12px 40px 10px;
+  }
+}
 @media screen and (max-width: 600px) {
   #content .sub_visual {
     height: 200px;
@@ -1947,6 +2011,20 @@ a {
   }
   #content .container .inner {
     padding: 50px;
+  }
+  #content .container .inner h2.util {
+    padding-right: 50px;
+    margin-bottom: 60px;
+  }
+  #content .container .inner h2.util::after {
+    right: 0;
+    top: 25px;
+    width: 30px;
+    height: 22px;
+  }
+  #content .container .inner h2.util span {
+    font-size: 22px;
+    padding: 10px 30px 6px;
   }
   #content .container .inner h3 {
     font-size: 22px;
@@ -2101,6 +2179,28 @@ a {
 
 #content.youtube .sub_visual {
   background: #eee url(../img/sub/sub_visual_5.png) no-repeat center top/cover;
+}
+
+#content.login {
+  background: #def1ee;
+}
+#content.login .box {
+  width: 460px;
+  margin: 0 auto;
+  padding-top: 5px;
+  border-top: 5px solid #3c2121;
+}
+#content.login .box fieldset {
+  border: 0;
+}
+#content.login .box .input_box input[type=text], #content.login .box .input_box input[type=password] {
+  display: block;
+  width: 100%;
+  height: 58px;
+  border: 0;
+  border-bottom: 1px solid #d2d2d2;
+  font-size: 18px;
+  background: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

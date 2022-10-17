@@ -25,14 +25,41 @@
 
   .container {
     .inner {
-      padding: 100px 120px;
+      padding: 100px 120px; text-align: center;
+
+      h2.util {
+        position: relative; display: inline-block; transform: rotate(-5deg); padding-right: 80px; margin-bottom: 100px;
+
+        &::after {
+          content: ''; position: absolute; right: 0;  top: 35px;
+          width: 50px; height: 35px; background: url(../img/sub/icon_arrow.png) no-repeat center/100%; 
+        }
+
+        span {
+          position: relative; display: block;
+          font-family: 'Montserrat'; font-size: 40px; font-weight: 700; color: #3C2121; 
+          padding: 12px 60px;
+
+          &::before {
+            content: ''; position: absolute; left: 7px; top: 7px; width: 100%; height: 100%;
+            border: 3px solid #3C2121;  background: #ee7868; z-index: -1;
+          }
+
+          &::after {
+            content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+            border: 3px solid #3C2121;  background: #fff; z-index: -1;
+          }
+        }
+      }
 
       h3 {
         font-family: "S-CoreDream"; font-size: 35px; font-weight: 500; color: #3c2121; 
-        text-align: center; margin-bottom: 60px;
+        margin-bottom: 60px;
   
         strong {font-weight: 600; color: #CE403D;}
       }
+
+      
     }
   }
 
@@ -99,7 +126,25 @@
 
 @media screen and (max-width: 899px) {
 
+  #content {
+    .container {
+      .inner {
+        h2.util {
+          padding-right: 70px; margin-bottom: 80px;
   
+          &::after {
+            right: 0;  top: 30px;
+            width: 40px; height: 30px;
+          }
+  
+          span {
+            font-size: 30px; padding: 12px 40px 10px;
+          }
+        }
+
+      }
+    }
+  }
 }
 
 
@@ -125,6 +170,20 @@
     .container {
       .inner {
         padding: 50px;
+
+        h2.util {
+          padding-right: 50px; margin-bottom: 60px;
+  
+          &::after {
+            right: 0;  top: 25px;
+            width: 30px; height: 22px;
+          }
+  
+          span {
+            font-size: 22px; padding: 10px 30px 6px;
+          }
+        }
+
         h3 {
           font-size: 22px; margin-bottom: 30px;
         }

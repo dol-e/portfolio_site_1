@@ -2193,14 +2193,173 @@ a {
 #content.login .box fieldset {
   border: 0;
 }
-#content.login .box .input_box input[type=text], #content.login .box .input_box input[type=password] {
+#content.login .box .input_box input {
   display: block;
   width: 100%;
   height: 58px;
   border: 0;
-  border-bottom: 1px solid #d2d2d2;
+  border-bottom: 1px solid #999;
+  font-family: "Roboto";
   font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  padding: 10px;
   background: transparent;
+}
+#content.login .box .input_box input::placeholder {
+  font-family: "Noto Sans KR";
+  font-size: 18px;
+  font-weight: 300;
+  color: #999;
+}
+#content.login .box .input_box input:active, #content.login .box .input_box input:focus {
+  outline: 0;
+}
+#content.login .box .check_box {
+  padding-top: 20px;
+  text-align: left;
+}
+#content.login .box .check_box label {
+  font-family: "S-CoreDream";
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  background: url(../img/sub/check_off.png) no-repeat 0 center/20px;
+  padding: 0 2px 0 25px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#content.login .box .check_box label.focus {
+  outline: 2px solid #000;
+}
+#content.login .box .check_box label.on {
+  background: url(../img/sub/check_on.png) no-repeat 0 center/20px;
+}
+#content.login .box .btn_login {
+  position: relative;
+  display: inline-block;
+  width: 287px;
+  height: 60px;
+  background: #CE403D;
+  border-radius: 36px;
+  border: solid 3px #CE403D;
+  font-family: "Noto Sans KR";
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 3;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+#content.login .box .login_menu {
+  display: inline-flex;
+  margin-top: 20px;
+}
+#content.login .box .login_menu li {
+  margin-right: 20px;
+}
+#content.login .box .login_menu li a {
+  position: relative;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+#content.login .box .login_menu li a::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: #aaa;
+}
+#content.login .box .login_menu li:last-child {
+  margin-right: 0;
+}
+#content.login .box .login_menu li:last-child a::after {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  #content.login .box .btn_login {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 52px;
+    background: #CE403D;
+    border-radius: 36px;
+    border: solid 3px #CE403D;
+    font-family: "Noto Sans KR";
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2.5;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 899px) {
+  #content.login .box {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #content.login .box .input_box input {
+    height: 48px;
+    font-size: 15px;
+  }
+  #content.login .box .input_box input::placeholder {
+    font-size: 15px;
+  }
+  #content.login .box .check_box label {
+    font-size: 15px;
+  }
+  #content.login .box .btn_login {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 48px;
+    background: #CE403D;
+    border-radius: 36px;
+    border: solid 3px #CE403D;
+    font-family: "Noto Sans KR";
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2.5;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 450px) {
+  #content.login .box .btn_login {
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    height: 48px;
+    background: #CE403D;
+    border-radius: 36px;
+    border: solid 3px #CE403D;
+    font-family: "Noto Sans KR";
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 2.5;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+#content.join {
+  background: #ffdcd1;
 }
 
 /*# sourceMappingURL=style.css.map */

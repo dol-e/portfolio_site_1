@@ -38,14 +38,14 @@
   overflow: hidden;
 }
 
-@mixin btn_red($width: 287px, $height: 60px, $fontSize: 18px, $fontWeight: 700, $lineHeight: 3) {
+@mixin btn_red($width: 287px, $height: 60px, $fontSize: 18px, $fontWeight: 700, $lineHeight: 3, $fontFamily: 'Nunito Sans') {
   position: relative;
   display: inline-block;
   width: $width; height: $height;
   background: #CE403D;
   border-radius: 36px;
   border: solid 3px #CE403D;
-  font-family: 'Nunito Sans';
+  font-family: $fontFamily;
   color: #fff;
   font-size: $fontSize;
   font-weight: $fontWeight;

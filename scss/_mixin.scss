@@ -21,13 +21,13 @@
   transition: .5s;
 }
 
-@mixin btn_white($width: 287px, $height: 60px, $fontSize: 18px, $fontWeight: 700, $lineHeight: 3) {
+@mixin btn_white($width: 287px, $height: 60px, $fontSize: 18px, $fontWeight: 700, $lineHeight: 3, $fontFamily: 'Nunito Sans') {
   position: relative;
   display: inline-block;
   width: $width; height: $height;
   border-radius: 36px;
   border: solid 3px #CE403D;
-  font-family: 'Nunito Sans';
+  font-family: $fontFamily;
   color: #CE403D;
   font-size: $fontSize;
   font-weight: $fontWeight;

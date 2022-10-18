@@ -3,4 +3,41 @@
   .sub_visual{
     background: #eee url(../img/sub/sub_visual_4.png) no-repeat center top/cover;
   }
+  .container {
+    .box {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      
+      article {
+        width: 20%;
+        padding: 12px;
+  
+        div {
+          width: 100%; height: 100%;
+          background: #fff; border-radius: 4px;
+          box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+          box-sizing: border-box;
+          padding: 14px;
+  
+          img {width: 100%; object-fit: cover;}
+          
+          h2 {
+            margin-top: 15px;
+            font: bold 16px/1 'quicksand';
+            letter-spacing: 1px;
+            color: #444;
+            margin-bottom: 5px;
+          }
+          p {
+            font: 12px/1.2 'raleway';
+            color: #333;
+            margin-bottom: 15px;
+          }
+        }
+      }
+      
+    }
+  }
 }

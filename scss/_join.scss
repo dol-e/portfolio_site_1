@@ -1,4 +1,177 @@
 
 #content.join{
   background: #ffdcd1;
+
+  .box {
+    width: 100%; max-width: 620px; margin: 0 auto;
+
+    fieldset {border: 0;}
+
+    h3.table_tit {
+      font-family: 'S-CoreDream'; font-size: 20px; color: #222; font-weight: 500;
+      margin-bottom: 20px; text-align: left;
+    }
+
+    table {
+      width: 100%; border-top: 2px solid #3C2121; border-spacing: 0; 
+      padding-top: 5px; margin-bottom: 50px; text-align: left;
+
+      &.side_info_table {padding-top: 15px;}
+
+      th {
+        width: 140px; padding: 5px;
+        font-family: 'S-CoreDream'; font-size: 16px; color: #333; font-weight: 500;
+      }
+
+      td {
+        display: block; padding: 5px;
+        input[type="text"], input[type="password"] {
+          width: calc(100% - 130px); height: 48px; 
+          font-family: "Roboto"; font-size: 18px; font-weight: 400; color: #333;
+          padding: 10px; border: 1px solid #ccc; background: rgba(255,255,255,0.7);
+
+          &::placeholder {
+            font-family: "Noto Sans KR"; font-size: 14px; font-weight: 400; color: #999;
+          }
+        }
+
+        .select_box {
+          display: inline-block;
+
+          select {
+            width: 120px; height: 48px;
+            font-family: "Noto Sans KR"; font-size: 14px; font-weight: 400; color: #555;
+            border: 1px solid #ccc; background: rgba(255,255,255,0.7); text-align: center;
+          }
+        }
+
+        .check_box {
+          display: block;
+          input[type="checkbox"] {vertical-align: middle;}
+          label {
+            font-family: "Noto Sans KR"; font-size: 14px; font-weight: 400; color: #333;
+          }
+        }
+
+        .radio_box {
+          label {
+            font-family: "Noto Sans KR"; font-size: 14px; font-weight: 400; color: #333;
+          }
+        }
+
+        textarea {
+          width: calc(100% - 130px); height: 160px; padding: 10px;
+          font-family: "Noto Sans KR"; font-size: 14px; font-weight: 400; color: #333;
+          background: rgba(255,255,255,0.7); resize: none;
+
+          &::placeholder {
+            font-family: "Noto Sans KR"; font-size: 14px; font-weight: 400; color: #999;
+          }
+        }
+      }
+    }
+
+    .btn_box {
+      input {
+        display: inline-block; width: 185px; height: 55px;
+        font-family: "Noto Sans KR"; 
+        border-radius: 36px; font-size: 15px; font-weight: 400; color: #fff; line-height: 1;
+        text-align: center;
+      }
+
+      input[type="reset"] {background: #3c2121; border: solid 3px #3c2121; margin-right: 10px;}
+      
+      input[type="submit"] {background: #CE403D; border: solid 3px #CE403D;}
+    }
+  }
+}
+
+
+@media screen and (max-width: 899px) {
+
+  #content.join{
+    .box {
+      table {
+        th {
+          width: 100px;
+          font-size: 14px;
+        }
+  
+        td {
+          input[type="text"], input[type="password"] {
+            width: calc(100% - 110px); height: 35px; 
+            font-size: 14px; padding: 5px;
+  
+            &::placeholder {
+              font-size: 12px;
+            }
+          }
+  
+          .select_box {
+            select {
+              width: 100px; height: 35px;
+              font-family: "Noto Sans KR"; font-size: 12px; transform: translateY(1px);
+            }
+          }
+  
+          .check_box {
+            label {
+              font-size: 12px;
+            }
+          }
+  
+          .radio_box {
+            label {
+              font-size: 12px;
+            }
+          }
+  
+          textarea {
+            width: 100%; font-size: 12px; 
+  
+            &::placeholder {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+  #content.join{
+    .box {
+      table {
+        th {
+          width: 85px;
+          font-size: 12px;
+        }
+  
+        td {
+          input[type="text"], input[type="password"] {
+            width: 100%;
+          }
+
+          .select_box {
+            display: block;
+          }
+        }
+      }
+
+      .btn_box {
+        input {
+          width: 110px; height: 45px;
+          font-size: 12px; font-weight: 300;
+        }
+  
+        input[type="reset"] {margin-right: 5px;}
+      }
+    }
+  }
+
 }

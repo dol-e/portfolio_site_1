@@ -13,7 +13,9 @@
 
   <!-- JavaScript -->
   <script src="https://kit.fontawesome.com/53bbf4e99c.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b99ed1d1695813229483b6440b1a717"></script>
   <script defer src="js/header.js"></script>
+  <script defer src="js/location.js"></script>
 
 </head>
 
@@ -163,6 +165,34 @@
       <div class="container">
         <div class="inner">
           <h3>찾으시는 <strong>매장</strong>을 선택해 주세요.</h3>
+
+          <div class="box">
+            <div id="map"></div>
+  
+            <div class="list_area">
+              <ul class="branch">
+                <li class="on" data-index="0"><a href="#">휘경점</a></li>
+                <li class="on" data-index="0"><a href="#">청구역점</a></li>
+                <li class="on" data-index="0"><a href="#">교대점</a></li>
+                <li data-index="1"><a href="#">미아점</a></li>
+                <li data-index="2"><a href="#">신도림역점</a></li>
+              </ul>
+    
+              <ul class="traffic">
+                <li><a href="#">교통정보 보기</a></li>
+                <li class="on"><a href="#">교통정보 끄기</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <ul class="page">
+            <li class="on" title="1 페이지 선택됨"><a href="#">1</a></li>
+            <li title="2 페이지"><a href="#">2</a></li>
+            <li title="3 페이지"><a href="#">3</a></li>
+            <li title="4 페이지"><a href="#">4</a></li>
+            <li title="5 페이지"><a href="#">5</a></li>
+          </ul>
+
         </div>
       </div>
     </section>

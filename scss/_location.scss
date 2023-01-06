@@ -30,6 +30,16 @@
                 font-family: "fontAwesome"; font-size: 16px; color: #333;
               }
             }
+            &.on a {color: #CE403D;}
+            .branch_sub {
+              display: none;
+              padding: 0 20px 20px 20px;
+              text-align: left;
+              p {
+                font-family: "Noto Sans KR"; font-size: 16px; font-weight: 300;
+              }
+            }
+            &.on .branch_sub {display: block;}
           }
         }
 
@@ -49,21 +59,6 @@
         }
       }
     }
-
-    .page {
-      display: inline-flex; margin-top: 30px;
-      li {
-        margin-right: 20px;
-        a {
-          font-family: 'Roboto'; font-size: 22px; color: #666; font-weight: 300;
-        }
-        &:last-child {margin-right: 0;}
-        &.on a {
-          color: #CE403D; font-weight: 400; border-bottom: 1px solid #CE403D;
-        }
-      }
-    }
-
     
   }
 }
@@ -84,7 +79,6 @@
           }
         }
       }
-      .page {margin-top: 0;}
     }
   }
 }
@@ -121,7 +115,6 @@
           }
         }
       }
-      .page {margin-top: 0;}
     }
   }
 }

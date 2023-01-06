@@ -160,7 +160,7 @@
         <div class="inner">
           <h2 class="util"><span>JOIN US</span></h2>
           <div class="box">
-            <form action="result.html" method="get" id="member">
+            <form action="/" method="post" id="form">
               <fieldset>
                 <h3 class="table_tit">회원정보 입력</h3>     
                 <table class="base_info_table">
@@ -171,37 +171,45 @@
                   <tbody>
                     <tr>
                       <th scope="row"><label for="userid">아이디</label></th>
-                      <td>
+                      <td class="input_box">
                         <input type="text" name="userId" id="userId" placeholder="아이디를 입력하세요.">
+                        <div class="error"></div>
                       </td>
                     </tr>
                   
                     <tr>
-                      <th scope="row"><label for="pwd1">비밀번호</label></th>
-                      <td><input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요."></td>
+                      <th scope="row"><label for="password">비밀번호</label></th>
+                      <td class="input_box">
+                        <input type="password" name="password" id="password" placeholder="비밀번호를 입력하세요.">
+                        <div class="error"></div>
+                      </td>
                     </tr>
       
                     <tr>
-                      <th scope="row"><label for="pwd2">비밀번호 확인</label></th>
-                      <td><input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 다시 입력하세요."></td>
+                      <th scope="row"><label for="password2">비밀번호 확인</label></th>
+                      <td class="input_box">
+                        <input type="password" name="password2" id="password2" placeholder="비밀번호를 다시 입력하세요.">
+                        <div class="error"></div>
+                      </td>
                     </tr>
       
                     <tr>
                       <th scope="row"><label for="email">이메일</label></th>
-                      <td>
+                      <td class="input_box">
                         <input type="text" name="email" id="email" placeholder="이메일을 입력하세요.">
                         <div class="select_box">
                           <label for="account" class="hidden">이메일 계정 선택</label>
-                          <select name="account" id="account">
-                            <option value="직접 입력" selected>직접 입력</option>
-                            <option value="naver">naver.com</option>
-                            <option value="gmail">gmail.com</option>
-                            <option value="hanmail">hanmail.net</option>
-                            <option value="daum">daum.net</option>
-                            <option value="nate">nate.com</option>
-                            <option value="hotmail">hotmail.com</option>
+                          <select name="account" id="account" onchange="changeEmail();">
+                            <option value="" selected>직접 입력</option>
+                            <option value="@naver.com">@naver.com</option>
+                            <option value="@gmail.com">@gmail.com</option>
+                            <option value="@hanmail.net">@hanmail.net</option>
+                            <option value="@daum.net">@daum.net</option>
+                            <option value="@nate.com">@nate.com</option>
+                            <option value="@hotmail.com">@hotmail.com</option>
                           </select>
                         </div>
+                        <div class="error"></div>
                         <div class="check_box">
                           <input type="checkbox" id="mailing">
                           <label for="mailing">정보/이벤트 메일 수신에 동의합니다.</label>
@@ -211,8 +219,9 @@
       
                     <tr>
                       <th scope="row"><label for="mobile">휴대폰 번호</label></th>
-                      <td>
+                      <td class="input_box">
                         <input type="text" name="mobile" id="mobile" placeholder="- 없이 입력하세요.">
+                        <div class="error"></div>
                         <div class="check_box">
                           <input type="checkbox" id="sms">
                           <label for="sms">정보/이벤트 SMS 수신에 동의합니다.</label>
@@ -249,8 +258,8 @@
                 </table>
 
                 <div class="btn_box">
-                  <input type="reset" value="취소">
-                  <input type="submit" value="회원가입">
+                  <button type="button">취소</button>
+                  <button type="submit">회원가입</button>
                 </div>
               </fieldset>
             </form>            

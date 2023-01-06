@@ -102,3 +102,37 @@ setZoomable(zoom);
 function setZoomable(zoom){
     map.setZoomable(zoom)
 }
+
+
+
+// 아코디언 메뉴
+// function mouseClickHandler(){
+
+//   const target = this;
+
+//   const isSubMenu = target.querySelector(".branch_sub");
+//   if(!isSubMenu) return;
+
+//   const hasClassOn = target.classList.contains("on");
+
+//   for(let el of branch_btns) {
+//     el.classList.remove("on");
+//   }
+
+//   if(hasClassOn){
+//     target.classList.remove("on");
+//   } else {
+//     target.classList.add("on");
+//   }
+
+//   if(hasClassOn){
+//     target.classList.remove("on");
+//   } else {
+//     target.classList.add("on");
+//   }
+
+// }
+
+// branch_btns.forEach(function(el) {
+//   el.addEventListener('click',mouseClickHandler);
+// });

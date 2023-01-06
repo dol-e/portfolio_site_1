@@ -1,14 +1,25 @@
 @charset 'utf-8';
 
-/* 폰트 파일 */
+/************ 폰트 파일 ************/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import 'font.scss';
 
-/* css 파일 */
-@import 'reset.scss';
+/************ reset ************/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,ol,li {list-style: none;}
+a {text-decoration: none;}
+
+/* 대체 텍스트 */
+.hidden {position: absolute; top: -99999999px; opacity: 0;}
+
+/* clearfix */
+.clearfix:before, .clearfix:after {display: block; content: ""; line-height: 0;}
+.clearfix:after {clear: both;}
+
+/************ css 파일 ************/
 @import 'mixin.scss';
 @import 'layout.scss';
 @import 'main.scss';
